@@ -1,0 +1,64 @@
+Español
+* Presentación: Bienvenido a nuestro video de la presentación de avance intermedio, de nuestro proyecto de Visualización de Datos,
+ "Visualizaciones de Counter Strike: GO".
+* Motivaciones: Nuestras principales motivaciones para haber elegido el dataset respectivo a counter strike: go, vienen a que es uno de los 
+juegos más competitivos y populares de los últimos tiempos, esto se ve reflejado en que el año pasado se llego a tener alrededor de 900 
+torneos y se recaudaron alrededor de una cifra increiblemente grande como lo son 19 millones de dolares. 
+Por lo cual esto permite ver que su ambiente competitivo sigue muy activo, a pesar de haber salido hace 5 años. También nos interesa ver el 
+estilo de juego de aquello usuarios más experimentados y contrastar con el promedio. Para ello nos interesa usar nuestro conocimiento en
+visualizaciones y de esta forma encontrar patrones en los datos que lo cual nos va a entregar información, todo basandose en lo que
+nos permite el dataset. Lo que es por ejemplo el impacto de un tiro en otro jugador, datos de la victima, daño, arma, equipo, etc.
+
+* Objetivos: Los objetivos del trabajo son crear visualizaciones eficientes y efectivas, en la entrega de información útil al usuario
+jugador de counter strile go, tal que mejoren su toma de decisiones en sus partidas, tambien deseamos que estas visualizaciones sean 
+interactivas. Con tal de facilitar la búsqueda de información por parte del usuario que sea de utilidad para el. También que las 
+visualizaciones finales hayan sido iteradas en base al feedback recibido por el usuario cliente. Con el fin de que estas sean lo más cercana
+a las necesidades que ellos tengan, o respecto a los conocimientos que ellos deseen adquirir para mejorar su estilo de juego. 
+
+* Proceso creación Treemap: El proceso de creación del Treemap se basa en responder que mapas son más jugados y en cuales el promedio
+nivel de jugadores es más alto, el tamaño de area de los cuadros va a ser la cantidad de jugadores, y la intesidad de color de cada cuadro
+va a indicar si el promedio ranking de los jugadores de cada partida. 
+
+* Iteracion 1: En la iteración inicial se llega a una visualización simple en la cual se pueden comparar rápidamente que mapas son más 
+jugados, pero sin embargo se hace dificultosa la comparación precisa de los mapas entre sí. También se puede diferenciar levemente que mapas
+tienen un mayor ranking de nivel de jugadores.
+
+* Iteración 2: Usando el feedback obtenido por el usuario, llegamos a estas 2 visualizaciones en la cual la de arriba, es el treemap 
+invertido, es decir, el tamaño indica el promedio ranking de los jugadores. Se puede ver que estos mapas tienen similares promedios, ahora 
+con estos nuevos filtros agregados podemos filtrar el ranking de los jugadores. Y podemos observar que el mapa, "de_mirage", el siendo
+indicado por nuestro treemap antiguo más jugado, o con más registros. Aquí se verifica con el color más "ennegrecido" dado que estos treemap
+cumplen la misma función pero codificando las dimensiones de distinta forma.
+
+Ingles
+
+* Presentación: Welcome to our video of the intermediate advance presentation, of our Data Visualization project,
+  "Counter Strike Visualizations: GO" 
+
+* Motivaciones: Our main motivations for having chosen the respective dataset to counter strike: go, come to that is one of the
+more competitive and popular games of recent times, this is reflected in the fact that last year it came to have around 900
+tournaments and were raised around an incredibly large amount such as 19 million dollars.
+Therefore, this allows us to see that their competitive environment is still very active, despite being 5 years old. We are also interested 
+in seeing the game style of those more experienced users and contrast with the average. For this we are interested in using our
+ knowledge in visualizations and in this way find patterns in the data that will give us information, all based on what
+allows us the dataset. What is for example the impact of a shot on another player, data of the victim, damage, weapon, equipment, etc.
+
+* Objetivos: The objectives of the work are to create efficient and effective visualizations, in the delivery of useful information
+ to the user counter strike go player, so that they improve their decision making in their games, we also want these visualizations to be
+Interactive In order to facilitate the search for information by the user that is useful for him. Also that the
+Final visualizations have been iterated based on the feedback received by the client user. In order for these to be as close as possible
+to the needs that they have, or regarding the knowledge that they wish to acquire to improve their style of play.
+
+
+* Proceso creación Treemap: The process of creating the Treemap is based on answering which maps are most played and in which the average
+level of players is higher, the size of area of the tables will be the number of players, and the intensity of color of each table will 
+indicate whether the average ranking of the players is of each map.
+
+* Iteracion 1: In the initial iteration it's a simple visualization in which you can quickly compare which maps are more
+played, but nevertheless it is difficult to accurately compare the maps with each other. It can also be slightly differentiated which maps
+They have a higher ranking of player level.
+
+* Iteración 2:Using the feedback obtained by the user, we come to these 2 visualizations in which the one above is the treemap
+inverted, that is, the size indicates the average ranking of the players. You can see that these maps have similar averages, now
+With these new filters added we can filter the ranking of the players. And we can see that the map, "de_mirage", the being
+indicated by our most played old treemap, or with more records. Here it is verified with the most "blackened" color given that these treemap
+they fulfill the same function but coding the dimensions in a different way.

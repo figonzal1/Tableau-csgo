@@ -78,3 +78,5 @@ Backtrace:
 	BaseThreadInitThunk [0x00007FFF5F3B1FE4+20]
 	RtlUserThreadStart [0x00007FFF5F60CB31+33]
 
+[0812/234008:WARNING:resource_bundle.cc(311)] locale_file_path.empty() for locale 
+[0812/234012:WARNING:resource_bundle.cc(311)] locale_file_path.empty() for locale 

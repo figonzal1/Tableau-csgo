@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8' ?>
 
-<!-- build 20181.18.0706.1237                               -->
-<workbook source-build='2018.1.3 (20181.18.0706.1237)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+<!-- build 20181.18.0807.1415                               -->
+<workbook source-build='2018.1.4 (20181.18.0807.1415)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
   <document-format-change-manifest>
     <CascadingFilters />
     <SortTagCleanup />
@@ -17,6 +17,13 @@
       <aliases enabled='yes' />
       <column caption='Parametro Banda Referencia 1' datatype='real' name='[N players (copia)]' param-domain-type='any' role='measure' type='quantitative' value='0.0'>
         <calculation class='tableau' formula='0.0' />
+      </column>
+      <column caption='Gráfico de armas activo' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Daño Kevlar&quot;'>
+        <calculation class='tableau' formula='&quot;Daño Kevlar&quot;' />
+        <members>
+          <member value='&quot;Daño HP&quot;' />
+          <member value='&quot;Daño Kevlar&quot;' />
+        </members>
       </column>
       <column datatype='real' name='[Parametro Banda Referencia 1 (copia)]' param-domain-type='any' role='measure' type='quantitative' value='0.0'>
         <calculation class='tableau' formula='0.0' />
@@ -38,7 +45,7 @@
       <connection class='federated'>
         <named-connections>
           <named-connection caption='mm_master_demos' name='textscan.0cn0c870uyugce12e1jka1kwk5vw'>
-            <connection class='textscan' directory='C:/Users/Felipe/Desktop/visualizacionescsgo/cs-go-competitive-matchmaking-data' filename='mm_master_demos.csv' password='' server='' workgroup-auth-mode='as-is' />
+            <connection class='textscan' directory='C:/Users/Wil/Desktop/Wil/Otros/visualizacionescsgo/cs-go-competitive-matchmaking-data' filename='mm_master_demos.csv' password='' server='' workgroup-auth-mode='as-is' />
           </named-connection>
         </named-connections>
         <relation connection='textscan.0cn0c870uyugce12e1jka1kwk5vw' name='mm_master_demos.csv' table='[mm_master_demos#csv]' type='table'>
@@ -529,6 +536,9 @@
       <column caption='Y-Axis' datatype='integer' name='[Calculation_445293438774951938]' role='measure' type='quantitative'>
         <calculation class='tableau' formula='1' />
       </column>
+      <column caption='Gráfico de armas' datatype='string' name='[Calculation_513128913455656960]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='[Parameters].[Parameter 1]' />
+      </column>
       <column caption='Tipo de Disparo' datatype='string' name='[Calculation_516506605041111042]' role='dimension' type='nominal'>
         <calculation class='tableau' formula='IF [hp_dmg]=100 THEN &apos;Letal&apos; ELSE &apos;No letal&apos; END' />
       </column>
@@ -542,7 +552,7 @@
       <column caption='Daño Kevlar' datatype='integer' name='[arm_dmg]' role='measure' type='quantitative'>
         <desc>
           <formatted-text>
-            <run>Daño total inflingido al kevlar.&#10;Solo protege pecho.&#10;</run>
+            <run>&#10;Daño total inflingido al kevlar.&#10;Solo protege pecho.&#10;        </run>
           </formatted-text>
         </desc>
       </column>
@@ -550,63 +560,63 @@
       <column aggregation='CountD' caption='Atacante_pos_x' datatype='real' name='[att_pos_x]' role='dimension' type='ordinal'>
         <desc>
           <formatted-text>
-            <run>Posicion X de Atacante</run>
+            <run>&#10;Posicion X de Atacante        </run>
           </formatted-text>
         </desc>
       </column>
       <column aggregation='CountD' caption='Atacante_pos_y' datatype='real' name='[att_pos_y]' role='dimension' type='ordinal'>
         <desc>
           <formatted-text>
-            <run>Posicion Y del Atacante</run>
+            <run>&#10;Posicion Y del Atacante        </run>
           </formatted-text>
         </desc>
       </column>
       <column aggregation='Sum' caption='Atacante_ranking' datatype='integer' name='[att_rank]' role='dimension' type='ordinal'>
         <desc>
           <formatted-text>
-            <run>Clasificacion en ranked del atacante</run>
+            <run>&#10;Clasificacion en ranked del atacante        </run>
           </formatted-text>
         </desc>
       </column>
       <column caption='Atacante_faccion' datatype='string' name='[att_side]' role='dimension' type='nominal'>
         <desc>
           <formatted-text>
-            <run>Facción Terrorista o Anti-terrorista del atacante</run>
+            <run>&#10;Facción Terrorista o Anti-terrorista del atacante        </run>
           </formatted-text>
         </desc>
       </column>
       <column caption='Atacante_team' datatype='string' name='[att_team]' role='dimension' type='nominal'>
         <desc>
           <formatted-text>
-            <run>Nombre de Fantasia del equipo del atacante</run>
+            <run>&#10;Nombre de Fantasia del equipo del atacante        </run>
           </formatted-text>
         </desc>
       </column>
       <column caption='Promedio ranking partida' datatype='real' name='[avg_match_rank]' role='dimension' type='ordinal'>
         <desc>
           <formatted-text>
-            <run>Promedio de rankins de los jugadores de una partida</run>
+            <run>&#10;Promedio de rankins de los jugadores de una partida        </run>
           </formatted-text>
         </desc>
       </column>
       <column caption='Recompensa' datatype='integer' name='[award]' role='measure' type='quantitative'>
         <desc>
           <formatted-text>
-            <run>Recompensa por eliminar al enemigo</run>
+            <run>&#10;Recompensa por eliminar al enemigo        </run>
           </formatted-text>
         </desc>
       </column>
       <column caption='Ubicacion bomba' datatype='string' name='[bomb_site]' role='dimension' type='nominal'>
         <desc>
           <formatted-text>
-            <run>Lugar donde fue plantada al bomba</run>
+            <run>&#10;Lugar donde fue plantada al bomba        </run>
           </formatted-text>
         </desc>
       </column>
       <column caption='Valor equipo CT' datatype='integer' name='[ct_eq_val]' role='measure' type='quantitative'>
         <desc>
           <formatted-text>
-            <run>Valor total del equipo CT </run>
+            <run>&#10;Valor total del equipo CT         </run>
           </formatted-text>
         </desc>
       </column>
@@ -615,56 +625,56 @@
       <column caption='Lugar de Herida' datatype='string' name='[hitbox]' role='dimension' type='nominal'>
         <desc>
           <formatted-text>
-            <run>Parte del cuerpo que recibio una herida</run>
+            <run>&#10;Parte del cuerpo que recibio una herida        </run>
           </formatted-text>
         </desc>
       </column>
       <column caption='Daño HP' datatype='integer' name='[hp_dmg]' role='measure' type='quantitative'>
         <desc>
           <formatted-text>
-            <run>El daño total inflingido a la victima</run>
+            <run>&#10;El daño total inflingido a la victima        </run>
           </formatted-text>
         </desc>
       </column>
       <column caption='Bomba Plantada' datatype='boolean' name='[is_bomb_planted]' role='dimension' type='nominal'>
         <desc>
           <formatted-text>
-            <run>Indica si fue o no plantada la bomba</run>
+            <run>&#10;Indica si fue o no plantada la bomba        </run>
           </formatted-text>
         </desc>
       </column>
       <column caption='Mapa' datatype='string' name='[map]' role='dimension' type='nominal'>
         <desc>
           <formatted-text>
-            <run>Nombre del mapa</run>
+            <run>&#10;Nombre del mapa        </run>
           </formatted-text>
         </desc>
       </column>
       <column caption='Ronda' datatype='integer' name='[round]' role='measure' type='quantitative'>
         <desc>
           <formatted-text>
-            <run>Numero de la ronda</run>
+            <run>&#10;Numero de la ronda        </run>
           </formatted-text>
         </desc>
       </column>
       <column caption='Tipo de Ronda' datatype='string' name='[round_type]' role='dimension' type='nominal'>
         <desc>
           <formatted-text>
-            <run>Ronda ECO,normal,semi-eco,etc</run>
+            <run>&#10;Ronda ECO,normal,semi-eco,etc        </run>
           </formatted-text>
         </desc>
       </column>
       <column caption='Segundos' datatype='real' name='[seconds]' role='dimension' type='ordinal'>
         <desc>
           <formatted-text>
-            <run>Indica el segundo donde se produjo incidente entre jugadores</run>
+            <run>&#10;Indica el segundo donde se produjo incidente entre jugadores        </run>
           </formatted-text>
         </desc>
       </column>
       <column caption='Valor equipo Terrorista' datatype='integer' name='[t_eq_val]' role='measure' type='quantitative'>
         <desc>
           <formatted-text>
-            <run>Valor Total del equipo Terro</run>
+            <run>&#10;Valor Total del equipo Terro        </run>
           </formatted-text>
         </desc>
       </column>
@@ -673,49 +683,49 @@
       <column caption='Victima_pos_x' datatype='real' name='[vic_pos_x]' role='dimension' type='ordinal'>
         <desc>
           <formatted-text>
-            <run>Posicion en X de la victima</run>
+            <run>&#10;Posicion en X de la victima        </run>
           </formatted-text>
         </desc>
       </column>
       <column caption='Victima_pos_y' datatype='real' name='[vic_pos_y]' role='dimension' type='ordinal'>
         <desc>
           <formatted-text>
-            <run>Posicion Y de la victima</run>
+            <run>&#10;Posicion Y de la victima        </run>
           </formatted-text>
         </desc>
       </column>
       <column aggregation='Sum' caption='Victima_ranking' datatype='integer' name='[vic_rank]' role='dimension' type='ordinal'>
         <desc>
           <formatted-text>
-            <run>Clasificación ranked de la victima</run>
+            <run>&#10;Clasificación ranked de la victima        </run>
           </formatted-text>
         </desc>
       </column>
       <column caption='Victima_faccion' datatype='string' name='[vic_side]' role='dimension' type='nominal'>
         <desc>
           <formatted-text>
-            <run>Facción Terrorista o Anti-terrorista de la victima</run>
+            <run>&#10;Facción Terrorista o Anti-terrorista de la victima        </run>
           </formatted-text>
         </desc>
       </column>
       <column caption='Victima_team' datatype='string' name='[vic_team]' role='dimension' type='nominal'>
         <desc>
           <formatted-text>
-            <run>Nombre de Fantasia del equipo de la victima</run>
+            <run>&#10;Nombre de Fantasia del equipo de la victima        </run>
           </formatted-text>
         </desc>
       </column>
       <column caption='Facción ganadora ronda' datatype='string' name='[winner_side]' role='dimension' type='nominal'>
         <desc>
           <formatted-text>
-            <run>Ganador terrorista o anti-terrorista</run>
+            <run>&#10;Ganador terrorista o anti-terrorista        </run>
           </formatted-text>
         </desc>
       </column>
       <column caption='Team Ganador' datatype='string' name='[winner_team]' role='dimension' type='nominal'>
         <desc>
           <formatted-text>
-            <run>Nombre de fantasia del equipo que gano la ronda</run>
+            <run>&#10;Nombre de fantasia del equipo que gano la ronda        </run>
           </formatted-text>
         </desc>
       </column>
@@ -725,7 +735,7 @@
         </aliases>
         <desc>
           <formatted-text>
-            <run>Nombre de cada arma del juego</run>
+            <run>&#10;Nombre de cada arma del juego        </run>
           </formatted-text>
         </desc>
       </column>
@@ -740,7 +750,7 @@
         </aliases>
         <desc>
           <formatted-text>
-            <run>Categorías de las armas</run>
+            <run>&#10;Categorías de las armas        </run>
           </formatted-text>
         </desc>
       </column>
@@ -1030,6 +1040,12 @@
           <groupfilter function='level-members' level='[wp]' />
         </groupfilter>
       </group>
+      <group caption='Action (Nombre Arma,Categoría Arma)' hidden='true' name='[Action (Nombre Arma,Categoría Arma)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[wp]' />
+          <groupfilter function='level-members' level='[wp_type]' />
+        </groupfilter>
+      </group>
       <group caption='Acción (Ubicacion bomba,Mapa)' hidden='true' name='[Action (Ubicacion bomba,Mapa)]' name-style='unqualified' user:auto-column='sheet_link'>
         <groupfilter function='crossjoin'>
           <groupfilter function='level-members' level='[bomb_site]' />
@@ -1058,28 +1074,28 @@
         </groupfilter>
       </group>
       <mapped-images>
-        <mapped-image caption='de_dust2' expression='file:///C:/Users/Felipe/Desktop/visualizacionescsgo/cs-go-competitive-matchmaking-data/de_dust2_v2.png' name='[MappedImage1]'>
+        <mapped-image caption='de_dust2' expression='file:///C:/Users/Wil/Desktop/Wil/Otros/visualizacionescsgo/cs-go-competitive-matchmaking-data/de_dust2_v2.png' name='[MappedImage1]'>
           <mapping bottom='-1150.0' left='-2486.0' right='2127.0' top='3455.0' x='[att_pos_x]' y='[att_pos_y]' />
           <image-options show-entire-image='true' />
           <groupfilter function='crossjoin'>
             <groupfilter function='member' level='[map]' member='&quot;de_dust2&quot;' />
           </groupfilter>
         </mapped-image>
-        <mapped-image caption='de_cache' expression='file:///C:/Users/Felipe/Desktop/visualizacionescsgo/cs-go-competitive-matchmaking-data/de_cache_v2.png' name='[MappedImage2]'>
+        <mapped-image caption='de_cache' expression='file:///C:/Users/Wil/Desktop/Wil/Otros/visualizacionescsgo/cs-go-competitive-matchmaking-data/de_cache_v2.png' name='[MappedImage2]'>
           <mapping bottom='-2240.0' left='-2031.0' right='3752.0' top='3187.0' x='[att_pos_x]' y='[att_pos_y]' />
           <image-options show-entire-image='true' />
           <groupfilter function='crossjoin'>
             <groupfilter function='member' level='[map]' member='&quot;de_cache&quot;' />
           </groupfilter>
         </mapped-image>
-        <mapped-image caption='de_inferno' expression='file:///C:/Users/Felipe/Desktop/visualizacionescsgo/cs-go-competitive-matchmaking-data/de_inferno_v2.png' name='[MappedImage3]'>
+        <mapped-image caption='de_inferno' expression='file:///C:/Users/Wil/Desktop/Wil/Otros/visualizacionescsgo/cs-go-competitive-matchmaking-data/de_inferno_v2.png' name='[MappedImage3]'>
           <mapping bottom='-1062.0' left='-1960.0' right='2797.0' top='3800.0' x='[att_pos_x]' y='[att_pos_y]' />
           <image-options show-entire-image='true' />
           <groupfilter function='crossjoin'>
             <groupfilter function='member' level='[map]' member='&quot;de_inferno&quot;' />
           </groupfilter>
         </mapped-image>
-        <mapped-image caption='de_mirage' expression='file:///C:/Users/Felipe/Desktop/visualizacionescsgo/cs-go-competitive-matchmaking-data/de_mirage_v2.png' name='[MappedImage4]'>
+        <mapped-image caption='de_mirage' expression='file:///C:/Users/Wil/Desktop/Wil/Otros/visualizacionescsgo/cs-go-competitive-matchmaking-data/de_mirage_v2.png' name='[MappedImage4]'>
           <mapping bottom='-3401.0' left='-3217.0' right='1912.0' top='1682.0' x='[att_pos_x]' y='[att_pos_y]' />
           <image-options show-entire-image='true' />
           <groupfilter function='crossjoin'>
@@ -1134,7 +1150,7 @@
         <folder-item name='[vic_team]' type='field' />
       </folder>
       <extract count='-1' enabled='true' units='records'>
-        <connection access_mode='readonly' authentication='auth-none' author-locale='es_ES' class='hyper' dbname='C:/Users/Felipe/Desktop/visualizacionescsgo/mm_master_demos_extraccion.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='05/11/2018 03:44:40 PM' username='tableau_internal_user'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='es_ES' class='hyper' dbname='C:/Users/Wil/Desktop/Wil/Otros/visualizacionescsgo/mm_master_demos_extraccion.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='05/11/2018 03:44:40 PM' username='tableau_internal_user'>
           <relation name='Extract' table='[Extract].[Extract]' type='table' />
           <refresh increment-key='' incremental-updates='false'>
             <refresh-event add-from-file-path='' increment-value='%null%' refresh-type='create' rows-inserted='944938' timestamp-start='2018-05-11 15:44:40.883' />
@@ -1585,7 +1601,7 @@
           </groupfilter>
         </filter>
       </extract>
-      <layout dim-ordering='alphabetic' dim-percentage='0.497664' group-percentage='0.0607477' measure-ordering='alphabetic' measure-percentage='0.313084' parameter-percentage='0.128505' rowDisplayCount='2000' show-aliased-fields='true' show-structure='false' user-set-layout='true' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.404054' group-percentage='0.0567568' measure-ordering='alphabetic' measure-percentage='0.368919' parameter-percentage='0.17027' rowDisplayCount='2000' show-aliased-fields='true' show-structure='false' user-set-layout='true' />
       <style>
         <style-rule element='mark'>
           <encoding attr='shape' field='[none:map:nk]' type='shape'>
@@ -2447,139 +2463,6 @@
               <bucket>&quot;Grenade&quot;</bucket>
             </map>
           </encoding>
-          <encoding attr='shape' field='[none:wp:nk]' palette='Armas' type='shape'>
-            <map to='Armas/57go.png'>
-              <bucket>&quot;FiveSeven&quot;</bucket>
-            </map>
-            <map to='Armas/Ak47go.png'>
-              <bucket>&quot;AK47&quot;</bucket>
-            </map>
-            <map to='Armas/Auggo.png'>
-              <bucket>&quot;AUG&quot;</bucket>
-            </map>
-            <map to='Armas/Awpgo.png'>
-              <bucket>&quot;AWP&quot;</bucket>
-            </map>
-            <map to='Armas/CZ75go.png'>
-              <bucket>&quot;CZ&quot;</bucket>
-            </map>
-            <map to='Armas/Csgo_c4_csgo_trailer.png'>
-              <bucket>&quot;Bomb&quot;</bucket>
-            </map>
-            <map to='Armas/Csgousp.png'>
-              <bucket>&quot;USP&quot;</bucket>
-            </map>
-            <map to='Armas/Elitego.png'>
-              <bucket>&quot;DualBarettas&quot;</bucket>
-            </map>
-            <map to='Armas/Famasgo.png'>
-              <bucket>&quot;Famas&quot;</bucket>
-            </map>
-            <map to='Armas/G3.png'>
-              <bucket>&quot;G3SG1&quot;</bucket>
-            </map>
-            <map to='Armas/Galilar.png'>
-              <bucket>&quot;Gallil&quot;</bucket>
-            </map>
-            <map to='Armas/Glockgo.png'>
-              <bucket>&quot;Glock&quot;</bucket>
-            </map>
-            <map to='Armas/Knife_csgo.png'>
-              <bucket>&quot;Knife&quot;</bucket>
-            </map>
-            <map to='Armas/M1014.png'>
-              <bucket>&quot;XM1014&quot;</bucket>
-            </map>
-            <map to='Armas/M249go.png'>
-              <bucket>&quot;M249&quot;</bucket>
-            </map>
-            <map to='Armas/M4a1-s.png'>
-              <bucket>&quot;M4A1&quot;</bucket>
-            </map>
-            <map to='Armas/M4a4.png'>
-              <bucket>&quot;M4A4&quot;</bucket>
-            </map>
-            <map to='Armas/Mac10go.png'>
-              <bucket>&quot;Mac10&quot;</bucket>
-            </map>
-            <map to='Armas/Mag7.png'>
-              <bucket>&quot;Swag7&quot;</bucket>
-            </map>
-            <map to='Armas/Mp7.png'>
-              <bucket>&quot;MP7&quot;</bucket>
-            </map>
-            <map to='Armas/Mp9.png'>
-              <bucket>&quot;MP9&quot;</bucket>
-            </map>
-            <map to='Armas/Negev.png'>
-              <bucket>&quot;Negev&quot;</bucket>
-            </map>
-            <map to='Armas/Nova.png'>
-              <bucket>&quot;Nova&quot;</bucket>
-            </map>
-            <map to='Armas/P2000go.png'>
-              <bucket>&quot;P2000&quot;</bucket>
-            </map>
-            <map to='Armas/P250go.png'>
-              <bucket>&quot;P250&quot;</bucket>
-            </map>
-            <map to='Armas/P90go.png'>
-              <bucket>&quot;P90&quot;</bucket>
-            </map>
-            <map to='Armas/Pp19.png'>
-              <bucket>&quot;Bizon&quot;</bucket>
-            </map>
-            <map to='Armas/Sawedoff.png'>
-              <bucket>&quot;SawedOff&quot;</bucket>
-            </map>
-            <map to='Armas/Scar20.png'>
-              <bucket>&quot;Scar20&quot;</bucket>
-            </map>
-            <map to='Armas/Sg556.png'>
-              <bucket>&quot;SG556&quot;</bucket>
-            </map>
-            <map to='Armas/Ssg08.png'>
-              <bucket>&quot;Scout&quot;</bucket>
-            </map>
-            <map to='Armas/Tec9.png'>
-              <bucket>&quot;Tec9&quot;</bucket>
-            </map>
-            <map to='Armas/Ump45go.png'>
-              <bucket>&quot;UMP&quot;</bucket>
-            </map>
-            <map to='Armas/W_decoy.png'>
-              <bucket>&quot;Decoy&quot;</bucket>
-            </map>
-            <map to='Armas/W_flashbang_csgo.png'>
-              <bucket>&quot;Flash&quot;</bucket>
-            </map>
-            <map to='Armas/W_hegrenade_csgo.png'>
-              <bucket>&quot;HE&quot;</bucket>
-            </map>
-            <map to='Armas/W_incendiary.png'>
-              <bucket>&quot;Incendiary&quot;</bucket>
-            </map>
-            <map to='Armas/W_smokegrenade_csgo.png'>
-              <bucket>&quot;Smoke&quot;</bucket>
-            </map>
-            <map to='Armas/W_taser.png'>
-              <bucket>&quot;Zeus&quot;</bucket>
-            </map>
-            <map to='Armas/Weapon_deagle.png'>
-              <bucket>&quot;Deagle&quot;</bucket>
-            </map>
-            <map to='Armas/Weapon_molotov.png'>
-              <bucket>&quot;Molotov&quot;</bucket>
-            </map>
-          </encoding>
-          <encoding attr='shape' field='[none:att_side:nk]' type='shape'>
-            <map to='circle'>
-              <bucket>&quot;CounterTerrorist&quot;</bucket>
-            </map>
-            <map to='plus'>
-              <bucket>&quot;Terrorist&quot;</bucket>
-            </map>
-          </encoding>
           <encoding attr='color' field='[:Measure Names]' type='palette'>
             <map to='#4e79a7'>
               <bucket>&quot;[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[attr:arm_dmg:qk]&quot;</bucket>
@@ -2843,6 +2726,131 @@
               <bucket>&quot;[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[sum:award:qk]&quot;</bucket>
             </map>
           </encoding>
+          <encoding attr='shape' field='[none:wp:nk]' palette='Armas' type='shape'>
+            <map to='Armas/57go.png'>
+              <bucket>&quot;FiveSeven&quot;</bucket>
+            </map>
+            <map to='Armas/Ak47go.png'>
+              <bucket>&quot;AK47&quot;</bucket>
+            </map>
+            <map to='Armas/Auggo.png'>
+              <bucket>&quot;AUG&quot;</bucket>
+            </map>
+            <map to='Armas/Awpgo.png'>
+              <bucket>&quot;AWP&quot;</bucket>
+            </map>
+            <map to='Armas/CZ75go.png'>
+              <bucket>&quot;CZ&quot;</bucket>
+            </map>
+            <map to='Armas/Csgo_c4_csgo_trailer.png'>
+              <bucket>&quot;Bomb&quot;</bucket>
+            </map>
+            <map to='Armas/Csgousp.png'>
+              <bucket>&quot;USP&quot;</bucket>
+            </map>
+            <map to='Armas/Elitego.png'>
+              <bucket>&quot;DualBarettas&quot;</bucket>
+            </map>
+            <map to='Armas/Famasgo.png'>
+              <bucket>&quot;Famas&quot;</bucket>
+            </map>
+            <map to='Armas/G3.png'>
+              <bucket>&quot;G3SG1&quot;</bucket>
+            </map>
+            <map to='Armas/Galilar.png'>
+              <bucket>&quot;Gallil&quot;</bucket>
+            </map>
+            <map to='Armas/Glockgo.png'>
+              <bucket>&quot;Glock&quot;</bucket>
+            </map>
+            <map to='Armas/Knife_csgo.png'>
+              <bucket>&quot;Knife&quot;</bucket>
+            </map>
+            <map to='Armas/M1014.png'>
+              <bucket>&quot;XM1014&quot;</bucket>
+            </map>
+            <map to='Armas/M249go.png'>
+              <bucket>&quot;M249&quot;</bucket>
+            </map>
+            <map to='Armas/M4a1-s.png'>
+              <bucket>&quot;M4A1&quot;</bucket>
+            </map>
+            <map to='Armas/M4a4.png'>
+              <bucket>&quot;M4A4&quot;</bucket>
+            </map>
+            <map to='Armas/Mac10go.png'>
+              <bucket>&quot;Mac10&quot;</bucket>
+            </map>
+            <map to='Armas/Mag7.png'>
+              <bucket>&quot;Swag7&quot;</bucket>
+            </map>
+            <map to='Armas/Mp7.png'>
+              <bucket>&quot;MP7&quot;</bucket>
+            </map>
+            <map to='Armas/Mp9.png'>
+              <bucket>&quot;MP9&quot;</bucket>
+            </map>
+            <map to='Armas/Negev.png'>
+              <bucket>&quot;Negev&quot;</bucket>
+            </map>
+            <map to='Armas/Nova.png'>
+              <bucket>&quot;Nova&quot;</bucket>
+            </map>
+            <map to='Armas/P2000go.png'>
+              <bucket>&quot;P2000&quot;</bucket>
+            </map>
+            <map to='Armas/P250go.png'>
+              <bucket>&quot;P250&quot;</bucket>
+            </map>
+            <map to='Armas/P90go.png'>
+              <bucket>&quot;P90&quot;</bucket>
+            </map>
+            <map to='Armas/Pp19.png'>
+              <bucket>&quot;Bizon&quot;</bucket>
+            </map>
+            <map to='Armas/Sawedoff.png'>
+              <bucket>&quot;SawedOff&quot;</bucket>
+            </map>
+            <map to='Armas/Scar20.png'>
+              <bucket>&quot;Scar20&quot;</bucket>
+            </map>
+            <map to='Armas/Sg556.png'>
+              <bucket>&quot;SG556&quot;</bucket>
+            </map>
+            <map to='Armas/Ssg08.png'>
+              <bucket>&quot;Scout&quot;</bucket>
+            </map>
+            <map to='Armas/Tec9.png'>
+              <bucket>&quot;Tec9&quot;</bucket>
+            </map>
+            <map to='Armas/Ump45go.png'>
+              <bucket>&quot;UMP&quot;</bucket>
+            </map>
+            <map to='Armas/W_decoy.png'>
+              <bucket>&quot;Decoy&quot;</bucket>
+            </map>
+            <map to='Armas/W_flashbang_csgo.png'>
+              <bucket>&quot;Flash&quot;</bucket>
+            </map>
+            <map to='Armas/W_hegrenade_csgo.png'>
+              <bucket>&quot;HE&quot;</bucket>
+            </map>
+            <map to='Armas/W_incendiary.png'>
+              <bucket>&quot;Incendiary&quot;</bucket>
+            </map>
+            <map to='Armas/W_smokegrenade_csgo.png'>
+              <bucket>&quot;Smoke&quot;</bucket>
+            </map>
+            <map to='Armas/W_taser.png'>
+              <bucket>&quot;Zeus&quot;</bucket>
+            </map>
+            <map to='Armas/Weapon_deagle.png'>
+              <bucket>&quot;Deagle&quot;</bucket>
+            </map>
+            <map to='Armas/Weapon_molotov.png'>
+              <bucket>&quot;Molotov&quot;</bucket>
+            </map>
+          </encoding>
           <encoding attr='color' field='[none:wp_type:nk]' palette='tableau10_10_0' type='palette'>
             <map to='#4e79a7'>
               <bucket>&quot;Heavy&quot;</bucket>
@@ -2869,6 +2877,14 @@
               <bucket>&quot;Unkown&quot;</bucket>
             </map>
           </encoding>
+          <encoding attr='shape' field='[none:att_side:nk]' type='shape'>
+            <map to='circle'>
+              <bucket>&quot;CounterTerrorist&quot;</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>&quot;Terrorist&quot;</bucket>
+            </map>
+          </encoding>
         </style-rule>
       </style>
       <semantic-values>
@@ -2884,6 +2900,9 @@
         </manual-sort>
       </default-sorts>
       <datasource-dependencies datasource='Parameters'>
+        <column caption='Gráfico de armas activo' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Daño Kevlar&quot;'>
+          <calculation class='tableau' formula='&quot;Daño Kevlar&quot;' />
+        </column>
         <column caption='Top n mapas' datatype='integer' name='[Top 4 Mapas mas jugados Parámetro]' param-domain-type='range' role='measure' type='quantitative' value='2'>
           <calculation class='tableau' formula='2' />
           <range max='10' min='1' />
@@ -2920,44 +2939,61 @@
       <activation auto-clear='true' type='on-select' />
       <source dashboard='Dashboard (v2)' type='sheet' />
       <command command='tsc:brush'>
-        <param name='field-captions' value='Lugar de Herida,Atacante_faccion' />
+        <param name='field-captions' value='Lugar de Herida,Atacante_faccion,Categoría Arma' />
         <param name='target' value='Dashboard (v2)' />
       </command>
     </action>
   </actions>
   <worksheets>
-    <worksheet name='Daño de armas'>
+    <worksheet name='Daño de armas HP'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Daño de armas</run>
+          </formatted-text>
+        </title>
+      </layout-options>
       <table>
         <view>
           <datasources>
             <datasource caption='mm_master_demos' name='federated.1grtkf707rf6zv1bfq7u71xkzkzw' />
+            <datasource name='Parameters' />
           </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Gráfico de armas activo' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Daño Kevlar&quot;'>
+              <calculation class='tableau' formula='&quot;Daño Kevlar&quot;' />
+            </column>
+          </datasource-dependencies>
           <datasource-dependencies datasource='federated.1grtkf707rf6zv1bfq7u71xkzkzw'>
             <column caption='Indice precision' datatype='real' name='[Calculation_445293438771798016]' role='measure' type='quantitative'>
               <calculation class='tableau' formula='100 * SUM( IF [hitbox] = &quot;Head&quot; THEN 1 ELSE 0 END ) / COUNT ( [hitbox] )' />
+            </column>
+            <column caption='Gráfico de armas' datatype='string' name='[Calculation_513128913455656960]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[Parameters].[Parameter 1]' />
             </column>
             <column-instance column='[hp_dmg]' derivation='Avg' name='[avg:hp_dmg:qk]' pivot='key' type='quantitative' />
             <column caption='Lugar de Herida' datatype='string' name='[hitbox]' role='dimension' type='nominal'>
               <desc>
                 <formatted-text>
-                  <run>Parte del cuerpo que recibio una herida</run>
+                  <run>&#10;Parte del cuerpo que recibio una herida        </run>
                 </formatted-text>
               </desc>
             </column>
             <column caption='Daño HP' datatype='integer' name='[hp_dmg]' role='measure' type='quantitative'>
               <desc>
                 <formatted-text>
-                  <run>El daño total inflingido a la victima</run>
+                  <run>&#10;El daño total inflingido a la victima        </run>
                 </formatted-text>
               </desc>
             </column>
             <column caption='Mapa' datatype='string' name='[map]' role='dimension' type='nominal'>
               <desc>
                 <formatted-text>
-                  <run>Nombre del mapa</run>
+                  <run>&#10;Nombre del mapa        </run>
                 </formatted-text>
               </desc>
             </column>
+            <column-instance column='[Calculation_513128913455656960]' derivation='None' name='[none:Calculation_513128913455656960:nk]' pivot='key' type='nominal' />
             <column-instance column='[wp]' derivation='None' name='[none:wp:nk]' pivot='key' type='nominal' />
             <column-instance column='[wp_type]' derivation='None' name='[none:wp_type:nk]' pivot='key' type='nominal' />
             <column-instance column='[Calculation_445293438771798016]' derivation='User' name='[usr:Calculation_445293438771798016:qk]' pivot='key' type='quantitative' />
@@ -2967,7 +3003,7 @@
               </aliases>
               <desc>
                 <formatted-text>
-                  <run>Nombre de cada arma del juego</run>
+                  <run>&#10;Nombre de cada arma del juego        </run>
                 </formatted-text>
               </desc>
             </column>
@@ -2982,7 +3018,7 @@
               </aliases>
               <desc>
                 <formatted-text>
-                  <run>Categorías de las armas</run>
+                  <run>&#10;Categorías de las armas        </run>
                 </formatted-text>
               </desc>
             </column>
@@ -2993,6 +3029,9 @@
           <filter class='quantitative' column='[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[avg:hp_dmg:qk]' included-values='in-range'>
             <min>1.0</min>
             <max>84.004587155963307</max>
+          </filter>
+          <filter class='categorical' column='[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[none:Calculation_513128913455656960:nk]'>
+            <groupfilter function='member' level='[none:Calculation_513128913455656960:nk]' member='&quot;Daño HP&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-marker='enumerate' />
           </filter>
           <computed-sort column='[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[none:wp:nk]' direction='DESC' using='[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[avg:hp_dmg:qk]' />
           <filter class='categorical' column='[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[none:wp_type:nk]' filter-group='3'>
@@ -3009,18 +3048,20 @@
             <column>[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[usr:Calculation_445293438771798016:qk]</column>
             <column>[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[Top 4 mapas jugados]</column>
             <column>[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[none:wp_type:nk]</column>
+            <column>[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[none:Calculation_513128913455656960:nk]</column>
           </slices>
           <aggregation value='true' />
         </view>
         <style>
           <style-rule element='legend'>
-            <format attr='border-style' value='dashed' />
             <format attr='border-width' value='2' />
+            <format attr='border-style' value='none' />
           </style-rule>
           <style-rule element='legend-title'>
             <format attr='text-align' value='center' />
           </style-rule>
           <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[avg:hp_dmg:qk]' value='Rango de daño HP' />
             <format attr='background-color' value='#e6e6e6' />
             <format attr='border-style' value='dashed' />
             <format attr='border-width' value='2' />
@@ -3067,6 +3108,180 @@
         <cols>([federated.1grtkf707rf6zv1bfq7u71xkzkzw].[none:wp_type:nk] / [federated.1grtkf707rf6zv1bfq7u71xkzkzw].[none:wp:nk])</cols>
       </table>
     </worksheet>
+    <worksheet name='Daño de armas Kevlar'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Daño de armas</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mm_master_demos' name='federated.1grtkf707rf6zv1bfq7u71xkzkzw' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Gráfico de armas activo' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Daño Kevlar&quot;'>
+              <calculation class='tableau' formula='&quot;Daño Kevlar&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1grtkf707rf6zv1bfq7u71xkzkzw'>
+            <column caption='Indice precision' datatype='real' name='[Calculation_445293438771798016]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='100 * SUM( IF [hitbox] = &quot;Head&quot; THEN 1 ELSE 0 END ) / COUNT ( [hitbox] )' />
+            </column>
+            <column caption='Gráfico de armas' datatype='string' name='[Calculation_513128913455656960]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[Parameters].[Parameter 1]' />
+            </column>
+            <column caption='Daño Kevlar' datatype='integer' name='[arm_dmg]' role='measure' type='quantitative'>
+              <desc>
+                <formatted-text>
+                  <run>&#10;Daño total inflingido al kevlar.&#10;Solo protege pecho.&#10;        </run>
+                </formatted-text>
+              </desc>
+            </column>
+            <column-instance column='[arm_dmg]' derivation='Avg' name='[avg:arm_dmg:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[hp_dmg]' derivation='Avg' name='[avg:hp_dmg:qk]' pivot='key' type='quantitative' />
+            <column caption='Lugar de Herida' datatype='string' name='[hitbox]' role='dimension' type='nominal'>
+              <desc>
+                <formatted-text>
+                  <run>&#10;Parte del cuerpo que recibio una herida        </run>
+                </formatted-text>
+              </desc>
+            </column>
+            <column caption='Daño HP' datatype='integer' name='[hp_dmg]' role='measure' type='quantitative'>
+              <desc>
+                <formatted-text>
+                  <run>&#10;El daño total inflingido a la victima        </run>
+                </formatted-text>
+              </desc>
+            </column>
+            <column caption='Mapa' datatype='string' name='[map]' role='dimension' type='nominal'>
+              <desc>
+                <formatted-text>
+                  <run>&#10;Nombre del mapa        </run>
+                </formatted-text>
+              </desc>
+            </column>
+            <column-instance column='[Calculation_513128913455656960]' derivation='None' name='[none:Calculation_513128913455656960:nk]' pivot='key' type='nominal' />
+            <column-instance column='[wp]' derivation='None' name='[none:wp:nk]' pivot='key' type='nominal' />
+            <column-instance column='[wp_type]' derivation='None' name='[none:wp_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_445293438771798016]' derivation='User' name='[usr:Calculation_445293438771798016:qk]' pivot='key' type='quantitative' />
+            <column caption='Nombre Arma' datatype='string' name='[wp]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;Swag7&quot;' value='Mag7' />
+              </aliases>
+              <desc>
+                <formatted-text>
+                  <run>&#10;Nombre de cada arma del juego        </run>
+                </formatted-text>
+              </desc>
+            </column>
+            <column caption='Categoría Arma' datatype='string' name='[wp_type]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;Equipment&quot;' value='Equipamiento' />
+                <alias key='&quot;Grenade&quot;' value='Granadas' />
+                <alias key='&quot;Heavy&quot;' value='Pesadas' />
+                <alias key='&quot;Pistol&quot;' value='Pistolas' />
+                <alias key='&quot;Rifle&quot;' value='Rifles' />
+                <alias key='&quot;Sniper&quot;' value='Snipers' />
+              </aliases>
+              <desc>
+                <formatted-text>
+                  <run>&#10;Categorías de las armas        </run>
+                </formatted-text>
+              </desc>
+            </column>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[Top 4 mapas jugados]' filter-group='7'>
+            <groupfilter function='member' level='[map]' member='&quot;de_cache&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='quantitative' column='[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[avg:arm_dmg:qk]' included-values='in-range'>
+            <min>0.0</min>
+            <max>7.1311365164761265</max>
+          </filter>
+          <filter class='categorical' column='[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[none:Calculation_513128913455656960:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Calculation_513128913455656960:nk]' member='&quot;All&quot;' />
+              <groupfilter function='member' level='[none:Calculation_513128913455656960:nk]' member='&quot;Daño Kevlar&quot;' />
+            </groupfilter>
+          </filter>
+          <computed-sort column='[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[none:wp:nk]' direction='DESC' using='[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[avg:hp_dmg:qk]' />
+          <filter class='categorical' column='[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[none:wp_type:nk]' filter-group='3'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:wp_type:nk]' member='&quot;Pistol&quot;' />
+              <groupfilter function='member' level='[none:wp_type:nk]' member='&quot;Rifle&quot;' />
+              <groupfilter function='member' level='[none:wp_type:nk]' member='&quot;SMG&quot;' />
+            </groupfilter>
+          </filter>
+          <computed-sort column='[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[none:wp_type:nk]' direction='DESC' using='[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[avg:hp_dmg:qk]' />
+          <filter class='quantitative' column='[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[usr:Calculation_445293438771798016:qk]' included-values='all' />
+          <slices>
+            <column>[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[avg:arm_dmg:qk]</column>
+            <column>[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[usr:Calculation_445293438771798016:qk]</column>
+            <column>[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[Top 4 mapas jugados]</column>
+            <column>[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[none:wp_type:nk]</column>
+            <column>[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[none:Calculation_513128913455656960:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='legend'>
+            <format attr='border-width' value='2' />
+            <format attr='border-style' value='none' />
+          </style-rule>
+          <style-rule element='legend-title'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[avg:arm_dmg:qk]' value='Rango de daño Kevlar' />
+            <format attr='background-color' value='#e6e6e6' />
+            <format attr='border-style' value='dashed' />
+            <format attr='border-width' value='2' />
+          </style-rule>
+          <style-rule element='quick-filter-title'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[none:wp_type:nk]' />
+              <lod column='[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[usr:Calculation_445293438771798016:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Nombre Arma:&#9;</run>
+                <run bold='true'>&lt;[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[none:wp:nk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Prom. Daño HP:&#9;</run>
+                <run bold='true'>&lt;[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[avg:hp_dmg:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Porcentaje de Headshots:&#9;</run>
+                <run bold='true'>&lt;[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[usr:Calculation_445293438771798016:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run bold='true'>&lt;Sheet name=&quot;Fotos armas&quot; maxwidth=&quot;800&quot; maxheight=&quot;500&quot; filter=&quot;&lt;All Fields&gt;&quot;&gt;</run>
+                <run>Æ&#10;&#10;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[avg:arm_dmg:qk]</rows>
+        <cols>([federated.1grtkf707rf6zv1bfq7u71xkzkzw].[none:wp_type:nk] / [federated.1grtkf707rf6zv1bfq7u71xkzkzw].[none:wp:nk])</cols>
+      </table>
+    </worksheet>
     <worksheet name='Economia según rondas'>
       <layout-options>
         <title>
@@ -3086,7 +3301,7 @@
         <view>
           <datasources>
             <datasource caption='mm_master_demos' name='federated.1grtkf707rf6zv1bfq7u71xkzkzw' />
-            <datasource caption='Parámetros' name='Parameters' />
+            <datasource name='Parameters' />
           </datasources>
           <datasource-dependencies datasource='Parameters'>
             <column caption='Parametro Banda Referencia 1' datatype='real' name='[N players (copia)]' param-domain-type='any' role='measure' type='quantitative' value='0.0'>
@@ -3116,14 +3331,14 @@
             <column caption='Valor equipo CT' datatype='integer' name='[ct_eq_val]' role='measure' type='quantitative'>
               <desc>
                 <formatted-text>
-                  <run>Valor total del equipo CT </run>
+                  <run>&#10;Valor total del equipo CT         </run>
                 </formatted-text>
               </desc>
             </column>
             <column caption='Mapa' datatype='string' name='[map]' role='dimension' type='nominal'>
               <desc>
                 <formatted-text>
-                  <run>Nombre del mapa</run>
+                  <run>&#10;Nombre del mapa        </run>
                 </formatted-text>
               </desc>
             </column>
@@ -3131,14 +3346,14 @@
             <column caption='Ronda' datatype='integer' name='[round]' role='measure' type='quantitative'>
               <desc>
                 <formatted-text>
-                  <run>Numero de la ronda</run>
+                  <run>&#10;Numero de la ronda        </run>
                 </formatted-text>
               </desc>
             </column>
             <column caption='Valor equipo Terrorista' datatype='integer' name='[t_eq_val]' role='measure' type='quantitative'>
               <desc>
                 <formatted-text>
-                  <run>Valor Total del equipo Terro</run>
+                  <run>&#10;Valor Total del equipo Terro        </run>
                 </formatted-text>
               </desc>
             </column>
@@ -3324,7 +3539,7 @@
             <column caption='Mapa' datatype='string' name='[map]' role='dimension' type='nominal'>
               <desc>
                 <formatted-text>
-                  <run>Nombre del mapa</run>
+                  <run>&#10;Nombre del mapa        </run>
                 </formatted-text>
               </desc>
             </column>
@@ -3335,7 +3550,7 @@
             <column caption='Facción ganadora ronda' datatype='string' name='[winner_side]' role='dimension' type='nominal'>
               <desc>
                 <formatted-text>
-                  <run>Ganador terrorista o anti-terrorista</run>
+                  <run>&#10;Ganador terrorista o anti-terrorista        </run>
                 </formatted-text>
               </desc>
             </column>
@@ -3401,7 +3616,7 @@
               </aliases>
               <desc>
                 <formatted-text>
-                  <run>Nombre de cada arma del juego</run>
+                  <run>&#10;Nombre de cada arma del juego        </run>
                 </formatted-text>
               </desc>
             </column>
@@ -3416,7 +3631,7 @@
               </aliases>
               <desc>
                 <formatted-text>
-                  <run>Categorías de las armas</run>
+                  <run>&#10;Categorías de las armas        </run>
                 </formatted-text>
               </desc>
             </column>
@@ -3507,28 +3722,28 @@
             <column aggregation='CountD' caption='Atacante_pos_x' datatype='real' name='[att_pos_x]' role='dimension' type='ordinal'>
               <desc>
                 <formatted-text>
-                  <run>Posicion X de Atacante</run>
+                  <run>&#10;Posicion X de Atacante        </run>
                 </formatted-text>
               </desc>
             </column>
             <column aggregation='CountD' caption='Atacante_pos_y' datatype='real' name='[att_pos_y]' role='dimension' type='ordinal'>
               <desc>
                 <formatted-text>
-                  <run>Posicion Y del Atacante</run>
+                  <run>&#10;Posicion Y del Atacante        </run>
                 </formatted-text>
               </desc>
             </column>
             <column aggregation='Sum' caption='Atacante_ranking' datatype='integer' name='[att_rank]' role='dimension' type='ordinal'>
               <desc>
                 <formatted-text>
-                  <run>Clasificacion en ranked del atacante</run>
+                  <run>&#10;Clasificacion en ranked del atacante        </run>
                 </formatted-text>
               </desc>
             </column>
             <column caption='Atacante_faccion' datatype='string' name='[att_side]' role='dimension' type='nominal'>
               <desc>
                 <formatted-text>
-                  <run>Facción Terrorista o Anti-terrorista del atacante</run>
+                  <run>&#10;Facción Terrorista o Anti-terrorista del atacante        </run>
                 </formatted-text>
               </desc>
             </column>
@@ -3536,21 +3751,21 @@
             <column caption='Lugar de Herida' datatype='string' name='[hitbox]' role='dimension' type='nominal'>
               <desc>
                 <formatted-text>
-                  <run>Parte del cuerpo que recibio una herida</run>
+                  <run>&#10;Parte del cuerpo que recibio una herida        </run>
                 </formatted-text>
               </desc>
             </column>
             <column caption='Daño HP' datatype='integer' name='[hp_dmg]' role='measure' type='quantitative'>
               <desc>
                 <formatted-text>
-                  <run>El daño total inflingido a la victima</run>
+                  <run>&#10;El daño total inflingido a la victima        </run>
                 </formatted-text>
               </desc>
             </column>
             <column caption='Mapa' datatype='string' name='[map]' role='dimension' type='nominal'>
               <desc>
                 <formatted-text>
-                  <run>Nombre del mapa</run>
+                  <run>&#10;Nombre del mapa        </run>
                 </formatted-text>
               </desc>
             </column>
@@ -3573,7 +3788,7 @@
               </aliases>
               <desc>
                 <formatted-text>
-                  <run>Categorías de las armas</run>
+                  <run>&#10;Categorías de las armas        </run>
                 </formatted-text>
               </desc>
             </column>
@@ -3616,6 +3831,8 @@
           <style-rule element='axis'>
             <format attr='display' class='0' field='[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[none:att_pos_y:qk]' scope='rows' value='false' />
             <format attr='display' class='0' field='[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[none:att_pos_x:qk]' scope='cols' value='false' />
+            <encoding attr='space' class='0' field='[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[none:att_pos_x:qk]' field-type='quantitative' max='6669.3653226980732' min='-3040.7579337989628' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[none:att_pos_y:qk]' field-type='quantitative' max='4321.8196568830726' min='-2143.3791528093388' range-type='fixed' scope='rows' type='space' />
           </style-rule>
           <style-rule element='header'>
             <format attr='band-color' scope='cols' value='#ffffff' />
@@ -3726,7 +3943,7 @@
             <column caption='Promedio ranking partida' datatype='real' name='[avg_match_rank]' role='dimension' type='ordinal'>
               <desc>
                 <formatted-text>
-                  <run>Promedio de rankins de los jugadores de una partida</run>
+                  <run>&#10;Promedio de rankins de los jugadores de una partida        </run>
                 </formatted-text>
               </desc>
             </column>
@@ -3734,7 +3951,7 @@
             <column caption='Mapa' datatype='string' name='[map]' role='dimension' type='nominal'>
               <desc>
                 <formatted-text>
-                  <run>Nombre del mapa</run>
+                  <run>&#10;Nombre del mapa        </run>
                 </formatted-text>
               </desc>
             </column>
@@ -3859,21 +4076,21 @@
             <column caption='Ubicacion bomba' datatype='string' name='[bomb_site]' role='dimension' type='nominal'>
               <desc>
                 <formatted-text>
-                  <run>Lugar donde fue plantada al bomba</run>
+                  <run>&#10;Lugar donde fue plantada al bomba        </run>
                 </formatted-text>
               </desc>
             </column>
             <column caption='Bomba Plantada' datatype='boolean' name='[is_bomb_planted]' role='dimension' type='nominal'>
               <desc>
                 <formatted-text>
-                  <run>Indica si fue o no plantada la bomba</run>
+                  <run>&#10;Indica si fue o no plantada la bomba        </run>
                 </formatted-text>
               </desc>
             </column>
             <column caption='Mapa' datatype='string' name='[map]' role='dimension' type='nominal'>
               <desc>
                 <formatted-text>
-                  <run>Nombre del mapa</run>
+                  <run>&#10;Nombre del mapa        </run>
                 </formatted-text>
               </desc>
             </column>
@@ -3954,9 +4171,9 @@
     <dashboard name='Dashboard (v2)'>
       <style>
         <style-rule element='parameter-ctrl'>
-          <format attr='border-style' value='dashed' />
           <format attr='border-width' value='2' />
           <format attr='background-color' value='#ffffff' />
+          <format attr='border-style' value='dashed' />
         </style-rule>
         <style-rule element='parameter-ctrl-title'>
           <format attr='text-align' value='center' />
@@ -3973,12 +4190,20 @@
         <column caption='Nombre Rankings' datatype='string' name='[Calculation_653022011877384192]' role='dimension' type='nominal'>
           <calculation class='tableau' formula='IF ([att_rank])= 0 THEN &apos;Unranked (0)&apos;&#13;&#10;ELSEIF ([att_rank]) = 1 THEN &apos;Plata 1 (1)&apos;&#13;&#10;ELSEIF ([att_rank]) = 2 THEN &apos;Plata 2 (2)&apos;&#13;&#10;ELSEIF ([att_rank]) = 3 THEN &apos;Plata 3 (3)&apos;&#13;&#10;ELSEIF ([att_rank]) = 4 THEN &apos;Plata 4 (4)&apos;&#13;&#10;ELSEIF ([att_rank]) = 5 THEN &apos;Plata Elite (5)&apos;&#13;&#10;ELSEIF ([att_rank]) = 6 THEN &apos;Plata Maestro Elite (6)&apos;&#13;&#10;ELSEIF ([att_rank]) = 7 THEN &apos;Nova Oro 1 (7)&apos;&#13;&#10;ELSEIF ([att_rank]) = 8 THEN &apos;Nova Oro 2 (8)&apos;&#13;&#10;ELSEIF ([att_rank]) = 9 THEN &apos;Nova Oro 3 (9)&apos;&#13;&#10;ELSEIF ([att_rank]) = 10 THEN &apos;Nova Oro Maestro (10)&apos;&#13;&#10;ELSEIF ([att_rank]) = 11 THEN &apos;Guardián Maestro 1 (11)&apos;&#13;&#10;ELSEIF ([att_rank]) = 12 THEN &apos;Guardián Maestro II (12)&apos;&#13;&#10;ELSEIF ([att_rank]) = 13 THEN &apos;Guardían Maestro Elite (13)&apos;&#13;&#10;ELSEIF ([att_rank]) = 14 THEN &apos;Guardían Maestro Distinguido (14)&apos;&#13;&#10;ELSEIF ([att_rank]) = 15 THEN &apos;Águila Legendaria (15)&apos;&#13;&#10;ELSEIF ([att_rank]) = 16 THEN &apos;Maestro Águila Legendaria (16)&apos;&#13;&#10;ELSEIF ([att_rank]) = 17 THEN &apos;Maestro Supremo Primera Clase (17)&apos;&#13;&#10;ELSEIF ([att_rank]) = 18 THEN &apos;Elite Global (18)&apos;&#13;&#10;END' />
         </column>
+        <column caption='Daño Kevlar' datatype='integer' name='[arm_dmg]' role='measure' type='quantitative'>
+          <desc>
+            <formatted-text>
+              <run>&#10;Daño total inflingido al kevlar.&#10;Solo protege pecho.&#10;        </run>
+            </formatted-text>
+          </desc>
+        </column>
         <column-instance column='[round]' derivation='Attribute' name='[attr:round:qk]' pivot='key' type='quantitative' />
+        <column-instance column='[arm_dmg]' derivation='Avg' name='[avg:arm_dmg:qk]' pivot='key' type='quantitative' />
         <column-instance column='[hp_dmg]' derivation='Avg' name='[avg:hp_dmg:qk]' pivot='key' type='quantitative' />
         <column caption='Daño HP' datatype='integer' name='[hp_dmg]' role='measure' type='quantitative'>
           <desc>
             <formatted-text>
-              <run>El daño total inflingido a la victima</run>
+              <run>&#10;El daño total inflingido a la victima        </run>
             </formatted-text>
           </desc>
         </column>
@@ -3988,7 +4213,7 @@
         <column caption='Ronda' datatype='integer' name='[round]' role='measure' type='quantitative'>
           <desc>
             <formatted-text>
-              <run>Numero de la ronda</run>
+              <run>&#10;Numero de la ronda        </run>
             </formatted-text>
           </desc>
         </column>
@@ -4003,7 +4228,7 @@
           </aliases>
           <desc>
             <formatted-text>
-              <run>Categorías de las armas</run>
+              <run>&#10;Categorías de las armas        </run>
             </formatted-text>
           </desc>
         </column>
@@ -4153,31 +4378,72 @@
               </zone>
             </zone>
           </zone>
-          <zone h='24733' id='30' name='Daño de armas' w='65800' x='800' y='46667'>
-            <layout-cache cell-count-w='32' minheight='284' non-cell-size-w='60' type-h='scalable' type-w='cell' />
-            <zone-style>
-              <format attr='border-color' value='#000000' />
-              <format attr='border-style' value='none' />
-              <format attr='border-width' value='0' />
-              <format attr='margin' value='4' />
-            </zone-style>
-          </zone>
-          <zone h='8866' id='59' name='Daño de armas' pane-specification-id='0' param='[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[none:wp_type:nk]' type='color' w='32600' x='66600' y='46667'>
-            <zone-style>
-              <format attr='border-color' value='#000000' />
-              <format attr='border-style' value='none' />
-              <format attr='border-width' value='0' />
-              <format attr='margin' value='4' />
-            </zone-style>
-          </zone>
-          <zone h='15867' id='61' param='vert' type='layout-flow' w='32600' x='66600' y='55533'>
-            <zone h='4066' id='60' name='Daño de armas' param='[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[avg:hp_dmg:qk]' type='filter' values='database' w='32600' x='66600' y='55533'>
-              <zone-style>
-                <format attr='border-color' value='#000000' />
-                <format attr='border-style' value='none' />
-                <format attr='border-width' value='0' />
-                <format attr='margin' value='4' />
-              </zone-style>
+          <zone h='24733' id='61' param='vert' type='layout-flow' w='98400' x='800' y='46667'>
+            <zone h='24733' id='75' type='layout-basic' w='98400' x='800' y='46667'>
+              <zone h='24733' id='67' param='horz' type='layout-flow' w='65800' x='800' y='46667'>
+                <zone h='24733' id='70' name='Daño de armas Kevlar' show-title='false' w='65788' x='800' y='46667'>
+                  <layout-cache cell-count-w='22' has-max-size-h='true' maxheight='1' minheight='1' non-cell-size-w='52' type-h='scalable' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='24733' id='68' name='Daño de armas HP' show-title='false' w='0' x='66588' y='46667'>
+                  <layout-cache minheight='241' type-h='scalable' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone h='24733' id='76' param='horz' type='layout-flow' w='32600' x='66600' y='46667'>
+                <zone h='24733' id='71' param='vert' type='layout-flow' w='32600' x='66600' y='46667'>
+                  <zone h='4133' id='72' mode='compact' param='[Parameters].[Parameter 1]' type='paramctrl' w='32600' x='66600' y='46667'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='4066' id='73' name='Daño de armas HP' param='[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[avg:hp_dmg:qk]' type='filter' values='database' w='32600' x='66600' y='50800'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='4066' id='78' name='Daño de armas Kevlar' param='[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[avg:arm_dmg:qk]' type='filter' values='database' w='32600' x='66600' y='54866'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='1800' id='74' name='Daño de armas HP' pane-specification-id='0' param='[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[none:wp_type:nk]' type='color' w='32600' x='66600' y='58932'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='4533' id='77' name='Daño de armas Kevlar' pane-specification-id='2' param='[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[none:wp_type:nk]' show-title='false' type='color' w='32600' x='66600' y='60732'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+              </zone>
             </zone>
           </zone>
           <zone-style>
@@ -4203,7 +4469,7 @@
         <column caption='Promedio ranking partida' datatype='real' name='[avg_match_rank]' role='dimension' type='ordinal'>
           <desc>
             <formatted-text>
-              <run>Promedio de rankins de los jugadores de una partida</run>
+              <run>&#10;Promedio de rankins de los jugadores de una partida        </run>
             </formatted-text>
           </desc>
         </column>
@@ -4211,7 +4477,7 @@
         <column caption='Mapa' datatype='string' name='[map]' role='dimension' type='nominal'>
           <desc>
             <formatted-text>
-              <run>Nombre del mapa</run>
+              <run>&#10;Nombre del mapa        </run>
             </formatted-text>
           </desc>
         </column>
@@ -4280,10 +4546,15 @@
   <windows source-height='30'>
     <window class='dashboard' maximized='true' name='Dashboard (v2)'>
       <viewpoints>
-        <viewpoint name='Daño de armas'>
+        <viewpoint name='Daño de armas HP'>
           <zoom type='entire-view' />
-          <highlight field='[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[none:wp_type:nk]'>
-            <bucket-selection />
+        </viewpoint>
+        <viewpoint name='Daño de armas Kevlar'>
+          <zoom type='entire-view' />
+          <highlight>
+            <color-one-way>
+              <field>[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[none:wp_type:nk]</field>
+            </color-one-way>
           </highlight>
         </viewpoint>
         <viewpoint name='Economia según rondas'>
@@ -4310,17 +4581,46 @@
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='6' />
-    </window>
-    <window class='dashboard' name='Dashboard TreeMap'>
-      <viewpoints>
-        <viewpoint name='Tree Map Mapas mas jugados'>
-          <zoom type='fit-width' />
-        </viewpoint>
-      </viewpoints>
       <active id='-1' />
     </window>
-    <window class='worksheet' hidden='true' name='Daño de armas'>
+    <window class='worksheet' name='Daño de armas HP'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='202'>
+            <card param='[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[avg:hp_dmg:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card param='[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[none:wp_type:nk]' type='filter' values='cascading' />
+            <card pane-specification-id='0' param='[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[none:wp_type:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[none:Calculation_513128913455656960:nk]</field>
+            <field>[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[none:wp_type:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' name='Daño de armas Kevlar'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -4342,19 +4642,28 @@
         </edge>
         <edge name='right'>
           <strip size='175'>
-            <card param='[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[avg:hp_dmg:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card param='[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[avg:arm_dmg:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
             <card param='[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[none:wp_type:nk]' type='filter' values='cascading' />
-            <card pane-specification-id='0' param='[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[none:wp_type:nk]' type='color' />
+            <card pane-specification-id='2' param='[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[none:wp_type:nk]' type='color' />
           </strip>
         </edge>
       </cards>
       <viewpoint>
         <highlight>
           <color-one-way>
+            <field>[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[none:Calculation_513128913455656960:nk]</field>
             <field>[federated.1grtkf707rf6zv1bfq7u71xkzkzw].[none:wp_type:nk]</field>
           </color-one-way>
         </highlight>
       </viewpoint>
+    </window>
+    <window class='dashboard' name='Dashboard TreeMap'>
+      <viewpoints>
+        <viewpoint name='Tree Map Mapas mas jugados'>
+          <zoom type='fit-width' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
     </window>
     <window class='worksheet' hidden='true' name='Economia según rondas'>
       <cards>
@@ -4618,459 +4927,385 @@
   <thumbnails>
     <thumbnail height='192' name='Dashboard (v2)' width='192'>
       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
-      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
-      cvHudv8fjh1lmU0IO/IAAAAASUVORK5CYII=
+      AAAgAElEQVR4nOy9d3Rc933o+bll7vQODHoHwd4pkqIomSq2imM7zc+x/VzevsQp+zZ7Eu++
+      l3Vy9mjfvj05cbJp+2Jvstms82InceQkLmq2ZYmiSLGBIAgQIHoHZjADTO9zy/4xBEiKpCTK
+      BAs4H3LODO7cufd3y/d+6+/3EwzDMKhQ4QFFvNsNqFDhblIRgAoPNBUBqPBAc08KwPLy8rt8
+      a7C09G7fV6jw/rlOAH7ywxfp7j7L0eOneTfvOD51jhODodW/X3rp5Q/ciKM/+cnq56XpQYbn
+      4td8n44ucuLkKU4eP8p0KMHg+dOkivoH3l+FCivI71yQ1wSe3PcQyeAgx7rH6PAbhJZjuPz1
+      tNU46b5wCavTS6sDpieGkeLjbNz1EIVMgvPne5AsLnZs7uBi7znSeY2dex9ieW58dRv1Dp1Q
+      BkbHpjm8ZwODo7PMhpZW93/m4gTPfPRnGB4eZuPGjYyNjtDS1s4jD9eQi8/yevcwTx/ay49P
+      nOPZxx+6oyerwvrjpiaQq66VdHiWQG0dsihz6tRJZof7KFj87NjaBUBDSwcHttRzsnccxeZi
+      9+49hCeGmR4+Q97RyoG92zh27MQ120hHZvnh8Qs8/qFDHHu7m/0HHqKptuqqPQuIQHBqjHTJ
+      YHR8ApMsMz7Yy8vH+vnw4/uR7TXo2fAan5oKDwI3FYCJvl6aN23j1Vd/xNadu6j2uWjZcYhd
+      TU6+/Z1/BUCWZAQEDMNAEAQAdOPKRg0MDINrtgFw8PCjWEwSgiAgAPpVqYiVTw8f3MUrL3wT
+      X/N24nND9M/n+YWPP4ciCVetVaHCT4f0/PPPP3/1gmximfngIpKzhq0dDUiozMzNY3P5cJp0
+      RifnCNQ2UFdThWxx4rYrIFvw2QSmZ2apa+uirWMT0ZlLTMwscvDQQSyitrqN+tpqFLsbp0XG
+      YzfRPzSOpFhoaqwHYHpshIb2LixWF5HIMg/v38lyOIRmGIRDQXTRjJCeYUkP0FrvuxvnrMI6
+      QrjXMsGF5CJvnp/mIx/af5M1DF556WU+/NxHkYU72rQK65B7TgAqVLiT3JN5gAoV7hTXhEHH
+      xwbvVjvuOC6Xh+pAPalUimAwiNPpJJVKrfv3rq5yBG9qauruXoA7iNPpxO/33/BaX2MCXTh/
+      hkBt091s6x1D1wo0NLYyNTWF2Wy+2825I1wtABcvXsTv99/lFt056urqbnitH1gTKBF/8Mop
+      0un03W7CXSGVSt30u+sywR+U1//lO9Q89AjWQorq6hpCyzE621sZvPAW6WItmzs9RJYTmKwO
+      xFIap7eahYVFmppqCYbjeG0ihtlNIRPH6y2HN9OJZVCcJCMhmtvbePMHP2LHRw6jZjXIJ3HX
+      NOG0Kh+ovW7P7X/6BSfO84MTsxw5sAlFMnD4G0hG5mlq7yK5FOSHx07z2P4deGta+PHL/4yI
+      TOOm7TR6rOiSiVg0Tn19HYtLMfwuC4YhEs/k6Wxrvi3tczgcH+BXGv/wd9/iyDM/Qya+zPzM
+      NNv27qJQEKCQwGx3k86mKBQEBK2I3+8hmsrisojoJidSeo5zkyl2bGxBRaDn7bc59NijFHUB
+      Wc2A2U02Hsbr91PQDWbGJnC4vGza3MWxn7xISfKxfUM9BUNGLeRRbE7UTIzqxg4cVtP7OgKn
+      03nT726bADQ1teG15xhfznL66Gts3FNHOFPPQmgJQbYxMraMpoogx1GzcfKD5zHXdDDw6ttk
+      jSy7OxsRbUXy6WWi0TiqppHLZzGVskSjUY6eH2dvcw39l8Zw6BqSnqcoOnA213yg9ibiyzQ0
+      tt6uwwegrqGBxjqVmblZ8pk0heUfYavpZCouUoiM4rRo/OiHP+HAkacxWRx4TTpjEzPoVQr5
+      ZJRoXuL4qQsUS1ncDhGHYsdssxFoasZ1G67UB9MAAru2b+StV/6ZpOjBabaw8KMf0dzSSmI5
+      B1qWJ595hO/+9T/iam3jxVdCNG0IUOW0ElxMcLDLT337VmYmBxmeXKDK5+TksdfxNnSQjkXI
+      LY5gq93I8IuvsPepJ4mOT7Kc7sZU3cLCQhhVzrIweRGruwabWUIUdcRiisGZFB998v2VwqRS
+      Kerq6m58dLfLB8gmUyguBzNjo4hFlZTFzvb2FkAllSyCoIIhYAiQiC7jUDTOjMU5vLuTucU4
+      LrOByVHF9Pgw7c0NZDSZmUvdmKvb8VvAXRUgFIzQ0OAnmdVQ01GqGtrf91PgnayJD6AXWU7k
+      EdE4deJNDn7oI8RCszS1dxELz5E3FMRiCpuvnlIqQh4LLptCPh3HUPN0jy5z5MBWFpeSeDwO
+      vA4rUwtLt00DfDAfwGBydJiqhlZCMxM4fQFsCiwni5gpYHa4SOfyuKx2liIR/H4fmgBqPoug
+      2Kmt9jIxOoLV4UQ1ZMzkQbaQyhaZH+3FVNVGjUPG6/djdXnIRKPEEgnqW9rIpZLcKOufySRw
+      Oqvwel3v+9hv5gPcUABCoRCRSITW1tZ3VR/3M7HlBbZs27t6UlRVZWRkBEVR6OzsvNvNWxOC
+      wSB79uwBHiwneEXw35cTPDU1xdzcHKOjo0xMTKzW5kfC71189n7WuVe42gfQNI2+vj6mp6cJ
+      BoMMDAwA1x5PIpFY/Tw/N3/nGnobuZEP0NPTw8LkRWbCGQDm5+dIJJLk0xnUy+vMzd/keDNh
+      5uLFNWrt7eOdD/HpoQssZ1ROnT5zvQ+Qy+X4+te/zvz8PM8++yxPPPEEieVFgstZzp08SnXH
+      HvZu6yQ4O0E0a7Aweh6zPYDZX425lGQhHGS4p5c9TzxHZ2P1HTvIW+VqH2BF0P/sz/4MQRD4
+      yle+gqqqFAoFzp96k2DawIqKx21nNl5iS2v93W38B+RGPkA+nSZrszAzOYzQ5CIiGMxMjmO3
+      +pAdIsvRDLXVPl76l7+nceshnCYdQRQZu9iNv6qKuFaNETAzsTxPJmNCzs6z/fBHqfPa7sIR
+      3ph3+gCS3cPC4Gk0k+96AVBVlba2Nubn52ltbUUQBBwOBx5doda3DVGR6Ovrw+V0gmDQ3L4J
+      m8tJNJalpXMTAgYmXcfnundOwI24WgPYbDacTieKouDxeLBYLEiSRGwpiKu6CUeNCVlNg2zB
+      4hXw3YLteS9xIw2wZXM76aJAV6dAMBSisbMFwaKQV2XyuSh+fxU+n4euzTtw+j1U2QRCmfJ1
+      d9gtBEwugnNztDW1UiiKiEU3lnusSOudGsDl8mAgUm+3X+8DmK0upqamSCaTeDwetmzZgiRJ
+      d7zRa807fYCRkRFisRiyLFNbW0tDQ8PdbuJtp+IDvA8foFQqIUkSTU1NGIaBqpYtweRVNvAK
+      hUSCwtUL1Dx5FcaGLjK/eG8nmt6ZByiVSgQCAex2O6VSCYCJyQmWo9HVda7+nM9fOfLo8pXl
+      9zIfLA9w/3NLeYBgMMj27dtX/+7r68PvtjO1EENLBbHXb2bvtk6Sy4tc7LmEd/MGXMD81Ag+
+      t42wWM+W2gA5/d5Sg+/kah9gamqK5ubm1RPV39+PruuEZyZJBpoJzk5icddgqHlCU0PMx1VE
+      XaOlwcfUcpG2Gi8+/73fN+FBzgTfLA9wnQDI8rWLRFFE03WsNiuKtR67vewDmGQZk82GkU8z
+      F89TXeVHEyRshsHw8CUaO7atzdHcJt4ZBVKUKxllWZYxDIOOzVsYn5zHYSkLs9VqRdI9dPhd
+      5BPLqMj43QpWq/WOt/+DUNEA13OdALhcLiYmJqirq2NycpLm5mZcLhe3loq5PYmbteRqDdDR
+      0UFPTw8bNmwgk8kgSRKSJFEdqKM68M4nx4pv0Hgnm3tbqGiA67nOB/D5fITDYd566y1UVcXl
+      Kkc8Cvn8TXeQTUaJJbO3qbl3hnf6AHv27CEWiyGK4mq2dL1R0QDXc50GGB0d5eDBg0DZMbx0
+      6RIBr4uhySDNtR5MDj+11V4y4Rnm8xL5VJpMNEhdUytLSyKSmsGQzeRLOjZRRXb4aaq79/IB
+      N6oFam6+9zXXT0NFA1zPdRrAZDJd81lVVaKxGKIkcr77FHOXx/DRCgXSRR2v20ZjawfRhQkG
+      RycQFRuKyYTbZiYaixKL3psRkrWoBr3XqWiA67mhE5xOp3E4HIRCIaqrq6mtrWUDwP495NMJ
+      +vr6qK5rYk+Td/V3TU1N7HnHthqb7t3ONWtRDXqvU9EA13OdAGzYsIGXX34ZVVVpaGhg7969
+      13xvcbjZsWPH2rT0DlLRAA8Ot6QBBgYG+PCHP4zJZCIajTIzM0PA76anf4wNrTUojircDgvF
+      fJaZhRCyJGO32zCLBpmCSsmQsEsqJdFKIRWlvrUdk3jv5QQqGuDB4ZY0gCiKq36Az+djfn6e
+      XC5HXcDHwMUBals24t7QSnwxTEHTQdCJx+OUCgXsFhMjUyGaG2sgN8HoQgHJ5qex1rO2R/gB
+      qGiAB4db0gArpQ8A2WwWm81GXbWXxUSBLVu2UNDK2WG3L0B7kxcBA90wEAWBUi7FRquH8EQ/
+      sr+drV1FfN5786RXNMCDwy1pgC1bttDf348gCFgsltXOIW1XFUA23cS5tVgsOL3QXP/kbWj2
+      2lLRAA8Ot6QBJEm6phZovVLRAA8Ot5QHeFCoaIAHh3fTAA+sAFTGBXpweLdxgR5YAahogAeH
+      iga4ARUN8OBQ0QA3oKIBHhwqGuAGVDTAg0NFA9yAigZ4cHjfeYBCIcvs9DAut59kYnldv+ta
+      cTUP8O4Tc68frn4SFotFgsEgDodjtfp3vb4Dq3mAd17ryhRJFR5oHlgTqEIFuI3Do1eocLuZ
+      nJykVCrh9/tZXl5ek/eKCVThnmV2dvamhZe3i4oJVOGB5hoBGB/qp7u7m0ujUzdZXScSucqL
+      VvNEYuXIQvfpkxS1mymTNIP90zf+JjTMdLRIJBK5xabfeQb6P9gsmivHWOHeQ3r++eefX/nj
+      Qv9FHnnkMIP95/E5rVy4OIguW4iFZhgbn8FfW08ivoSaTXJxaASHy0Uma5BcmiGVKeCtruVS
+      71lmpmew+mqwKhKzEyOMT46SyJjQCxFGJuaoq69DFGBksI/RS/2YAhsRiylSsTCjY+O4/NX0
+      nDzBbDBCXUMdg73dTC/GqHEI9I/NoyEyMzLAzGKUGp+dM2fPUzIkvG4nyaUQFy4OYLJ5mRru
+      Y3ZmGtHqw2FVGOg7x/TkFMHwMguLy/gdJnr7BkgXNNLRIBNT06TzOkIxxcDQEIZsw2W3Eo/M
+      0zc4SngpjscucXHgEjZvAKtyZdDgyZFBxmZC2GSdgUtDaKIZNb3MxaERJDVL79giqXiM+mon
+      Z8/2kFMFfJ77c5TpO0UymcTtdq/pPq7RAFohQ3d3NzZ3Nb2Xxti/fz9To5eIRMJoCEgizM3N
+      cmlsiv37HsKtFJgLxpmcD7N//x56z3WTzevs393O8NACAJPzi+zZswMTKm+/fRo1Os65sSUo
+      RVlMSOzYsgGA2bk5IpEIJQ1MkoYh29jb6ab7UhBVM5js7SOajjCfNPCU5im42ml1FOgdnSWR
+      LSFJZX/+rbdPIEkSp06+TTKbZ+/+3UwND5VPaDbPQ5vqSehu1FwcXdfRDYPeC30sRJbZs2cv
+      odlJVE0FJC70XgCgb2ic/Q/txWUz8/aJE0iSyMm3T1515krMhxM8tHs7uqZiINB3/sLqeXLZ
+      THRu3o6aT9Dz9nHyhsSZ06fX9MKuF4x8EnX27OrLyCdv6/avEQDJbGffvn08tHsbHqvMmTNn
+      EBUbPq+PQmyGqUh59DebSeDsuXMks+VRlIVSljNnzuKtrkMQru0AX0zH6e29SAmZhoY6LFVt
+      dNU7QbISX5zg4tD46ro+nxehEGNoKsLc5Bgne8dp9emMzcexyCZ0oKa2BounnsWx8/SNR6iv
+      rsLvsjA4VDZPmhsb0Q3YsWPHdW1Z5fLyifExDFFCliS0Qpae7rPosoXR0fHy8IhC+fSYUTnb
+      c55UtkhjYyMGEjt2XD32qYyaT9Dde5Gx0XEkSUYSxWvOkyAIIEBdYzMiGjt23v8ja9wJtMgw
+      ue/8u9WXFhkmGg5x9NhRpmZmVtdLJK8IxsTk5Pve/j0aBcpz6uQABx/e+96r3iZOnjrBwwcf
+      ed/rq/kUFwZGAHD7a+hsvf/GCr3XmZ2dpY4Que/8u9Vl1l/8/5hKWhhenCMdzVDjsWFxVTMy
+      NkZbYwBRsZNNLjF8aZSOzVuwO7w8dmj/Tfdxj+YBLHf05gdu6eYHkC3O68ZMqnBnsNqdHH70
+      KaYHLmBWFGYicQK+K76CSYD6xgbsDhex6LvPW3ePaoAKFcoaoLHajRYZXl0mVW9EsNy+4ME1
+      GsAwjJvbzfcRqqpeN89BhfsTQ5NQU/bVv0WfxO28Q6+5S3RdXxfzgRWLxYoArBOK09OE//N/
+      Wf078L/+HtkqH31Dw2zauAlDUwlHQjS0bqbKfesTM67Lu2Q9CHGFmxONRMhqOS72XySZS9Pg
+      t3PsrWMszE7TUu9n655DtDe9v6ls12UphKZpd7sJFdYQq91JY2MzLqeDxqY2Nmzowma1sGv3
+      bhobGgiHFt73tq5xgjVNWxdPz5UhHSvc38zOztLg81GcvlJGo7S0INrt7/KrW6NiAlW4pyko
+      Cgu1gdW/6xWF2zkl4boUgIoJtH5YSCX4qzNXyk6+tP9hqtDo6RvC7XLQuXkbly5043G7SOU0
+      9u3ZdUvbX5cCUGF9k8lmyOfziBaJU0dfYTq0zLbNnSBYbnlb69IJrphA6xtZVlAkA8nsRhVl
+      Du3bBYZAPHnrw75UnOAK9yyzs7NU1daykEqsLqt3urFeNZHjT0vFBKpwT2M1mejwVa3Z9ism
+      UIUHmnUpAJUoUIX3S8UEqnBPs7y8jNVqJZfLrcn7utQAFRNofbDWQ6JAJQpU4QGnYgJVuGcJ
+      hUIkk8k7NzLcetEAhUIBs9l8t5tR4adkZGSErq6uNd3HuvQBKlGg9YHfv/ZzOKxLAaiwPrgT
+      8zasSwFYD2ZchTujAW6rExyJRNi9ezf5fP52bvaWaWtrY/IWBkdaT3zve9/jkUdubYiXe5UV
+      R3Utua0CYBgG0WiUXC53Ozd7y6x4+Q8ipVLpbjfhtrFy87/00ku88MILOJ1O/vAP/xCLxcL0
+      5Dg2t49qn/c9t9Pf24Nid7FxQ+d1363LMOi7zQpY4f5hRQO88MILfOMb3+D111/n29/+Np/9
+      zM8xvRCmUxb4yYULtHY0I4kyi/PzIEqMDQ+zd99eNAyC8yGqvQ78LY2cPnUCi9OBoOuEw1G8
+      Xuf69AHebVbACvcPKxrA6XTy+uuv8+qrr7Jz505EyUw0vEBPzzmS0UVO9/Twxom3QLGgGwI2
+      i8zxE28yOjaK01uNhIBaSPKjH79O/8U+Nm3uwumtZm56AoyrUFXV+GlYXFw0rFarAdzVV1dX
+      111vw916vfHGGz/VNbyXGB4eNgzDMHK5nPGNb3zDOH/+/G3fR8UEqnDPsqIBLBYLX/jCF9Zk
+      HxUTqMI9y9WBjKNHj65+zmZSnDt3juDiTz+r0LrUABXWBysa4OjRozz//PMcOXKE559/Hpvd
+      SV5LYZZUTpw8iUMRUQUJWRKJLi9RXVePocHyUhjJ4iQeGuPgY89S7fNct491qQEqJtD6YEUD
+      HDlyZPXmv5qRgX7OdveQyOUxSjma6/wsxTOcPHOSTZu3EIst8/prP8Lp81F2ka7nthbDhcNh
+      Wltb73oeoKuri5GRkbvahrvFG2+8wZEjR+52M24LdyIRti41QIX1wZ1IZt53PsCXvvQlGhsb
+      2bhxI3/wB39AT0/Pdeu8lwn0e7/3e/T09PDyyy+vVTMr3AZWNPla9ge4L/MAgUDA+Iu/+AtD
+      FEXjueeeM77yla8Yu3btMlpbW41f+qVfMr72ta8ZDQ0Nxo4dO4zf+Z3fMZ588snV31osFuOP
+      //iPjT//8z+/6zH7tXitpzzAneC+M4EEQeB3f/d3+f3f/33a2to4dOgQX/3qV/nN3/xNurq6
+      aGtr42/+5m/41V/9VUZGRnj55Zf59V//9VXf5rHHHqO3txdZlvF4ro8KVHiwuO8E4JOf/CSn
+      Tp1ibm4Ov9/PwsICqqqSTqeRZZnZ2Vmi0Shms5kvf/nLtLW1EY/HV6d+evrpp7Hb7aRSKZ55
+      5pm7fDQV7jb3lQ+gKAqf+tSnGBwc5Ktf/SqnT53iPzzTyee7PkvGrvDNpSWeffhhnqgL0NzW
+      jLOo43Q6+VBNLef++E/IqiqnRYGvf/3rOBwOfuu3fmt12yaTiScPH+Ynx4+vq4rKCu/OfRkG
+      ra+r4y//+0+wt1HBHn0dNAEDE8PWPbQmY5hsGqWlFDOdn8a+FMUxMoqRyYEss3DoED9+8yiD
+      sRhnR0bQdR1REPnyJw/xcw0Kf9Jb4jtHjwNgGAaqqjI7O7umx3M7WU9h0DvBfaUBVvgffnYf
+      j5rPoc+KYDNANDAMC12lMURLFDQNw+bFk4zjbM2jMIGWsVIwHqLeYuEjRz7El/RLfCuyi7d7
+      R/B4PHzqYB2F/jSff8zDXK7E0lI5BKcZ2n0lAOuLPH/3N//Ilp3b6dq6E6flBrerXiQSy1Ht
+      d1//3fvgvhQAKW8DqxPRSBBp/HkcqSRWeY7isg1FTCOQQ6oP8IOIxid0DVNWxcjlkOVx9FmZ
+      Fo+A2bTAs1t2Mh1pIJ1OczIssqc6jxw201xbS6FQJJPNYGg3ziBWuMMU4rx8tBctmuDRn3+E
+      SwN5lPgUHU/uYnxogZ7UMfy+alTJjp4OI1tsmF0Bdm7u4MTR1zC7XBRVhVqPQmhumsDWx7jw
+      1vfuPycYoC+cQhPb0AP7+aPXQ/yn43H+ZHo7b7seo5BsQc3a0HX4ZGcKVyiMYOQwuRKYW3MM
+      N1j46niEkYZn+afeNLVVbmprAny3e4FvLzUyHKjjQx0d2Ow2ZEleF/Mm3880tm1g7969kJyj
+      btM+Oloayl8YBsZV5Q0OTxX79h+gmI6himb2799Paqk8S7wuW9i3ZweipjExOYkiqiwup6ht
+      bLs/NcByPkXeVY9JjdLpqUayuvli60VE7RyGI4KWUtBVA2lhCiGTRbLnUX2PcMnaxl9/9wxP
+      7qjHFDzDF7ZaMLQSZrWRP+stcObSAB9vbMAUWeK5PXv5wdkzpNIpWlpbyjs2QDd0ctkcS0tL
+      d/ckPBDIyBQ4d+4cXVu3o184x+jkHPWH9iGXzpAVZCxYaGyqZmBwjDOnz7B1z37y0TnOnj3H
+      tj17AWis8dHT00NBt1FbU4Ou6wSqHeBqvD+d4EAgwNDXP0va2szFsxewOdzstp6DbBwEMDSF
+      zGQb9k1LqHEzkjNPLPAwf/R2is988pNsCv+YxXyWgDmNLjjRJ3WibXv4h7NnULHw1IYurNks
+      Vbk8itvNPy/Ms5hK03tpEFVVyWaznD59ek2P8YOy3p3gyMwczuZG3jkZ0szcLM2NNx5LdGzo
+      IsvxNJt37cP1Dj/ivjSBmuvqCI8biJd6sQX2UpvzQT4NgkFmcgNqxoXJk4BcAooZSoUuJuJN
+      2Gw2uhaOIc2fod5sIEdmkT216P52qoRefnmvjNNu4djoCC6zBVsyRd7h4OfrG/hibS0Ht25D
+      lmR0Xb/bp+CBpfoGNz9w05sfoHPTNg4cPHjdzQ/3qRMMEI/ayJdMNNfncalvohWdSFIc24YY
+      Od+/Qe+7gMmIAgZkFnmo6vvs2VmFGIug17aRW+pCCfZiUl9CWRLQjHpKO/azpcGGqmpkVJVc
+      TYBEMolis1GdSqJYzNjsNjLZzN0+/Aq3iftSALovXOA/AL/zbz/HI9I8gsuPJE+il6opTMvQ
+      bsfSlMFIWxCtKqIRxIirSFIQMJCW49jUMTJhP3opj2jKo1FPouBnd6LsOL0kiQSXo5hMJozl
+      CCbD4NLsTHnM0Upg6L5A13VE8d2NnPtSAKAsBFMfPcLjgQVkaZZ8fj9iVyuiOEFWKpBsf5iq
+      OQU9oyHYi0jZgXLkQDcjGHlEsw1ra4Jc/hB6Uy2WZgvu5BCDvlYSmQKCViKTzaDrOsVCkWQ6
+      iSiKFPKFSmToPuEq9/am3Jc+gCAI/I+ffZpPBhJIVRZKKQeExyicSZBPN5EJSkwEFzlf9TCC
+      z0Ox9QjxpqcxTD4KkSpARyguIXsKCGYJwe2Ht/8FZ1DGpE2RSCV4TtXZ396OJEt8cs8etnRu
+      wNCNcnZYU+/2KagARELzTM0uMDk2zNTMJD09F4ncYh+C+1IDPPPEYT6+00vYJCFnnNiaLRRV
+      gUnBTNjvJSOKjM8K/HvvCOJiP8rsAInNv4ZTmsMSGEAvWBDNGkhWxHAPRk5F920kU1Oky9jC
+      xrkJjFKGqVCQvfX1dM1N0dzawR+GgiwsLJBKVrpc3mnSqQQlVcdssWGzloe+TyQSZFURn9uB
+      YaiYZYPFUBBVEwj43ei6/p5a4L4UgIGRSZo/twWPnOMvfxhDFwUOPLwfzWLgUsMcSFn5WMcM
+      guRGr6+jqG1BKBQojJWwNRoIgWaMYgohu4y89SlyxRpGOzsJRiI8thBEz2agoYHpcJBHGiRs
+      jgVez3rJpDNUV1eXo0CX7vZZeLCIRsJcuHCBus6d7Nu+AYCamhpC0TQSKoLVTbPHTz6TRFSU
+      1XD+e4X17wsBqPL72dzZyVunT7N5wwZ8Ph8+Ux5ZzfIbH5aRRCD5bcho6K6NCNFeWLagOZ8j
+      alTzvWUFiznGL1UXAR0jlyUXbMfWoCMuHkdu+HkaimkaSyV0r4dSdRUvxmNk01l0QyfpchIa
+      XUZAQBAr9v/doLm9gVdffANvXXJ1mdPjx+m5ts/wrQ6Jc0cE4PDhwzzzzDOkUikGBwfZv38/
+      kiQxNzfH1772tWvWdblcNDQ2gAGiKGK1Wvnlxx/nkM3O9w8cYKfNhsvlRE4fg8wSkqiDVgLJ
+      BJKMGOlFzTmRjDT6uWOYF1o5fPgwL02MU2h7BFN0AlIRFLtMxP4YrpluxHO9+Bp+TDHbRaZz
+      N+6qaT7hLTEwovDawDIOs4fB8SkQQBIrQ6/fDVLxONv37sHmcNzW7a65AGzbtq5BWdUAACAA
+      SURBVI2PfexjfOUrX8EwDHRdZ25ujsOHD19385tMJn7hox/F4nHjcziZDgVpbWzk0V27cb5x
+      lC90dlL0eNAooEWyiFY7hiqAAKrSSab2CJ65v8LkiqF5NiEHdKyeAh3mk2xr3og1ewYEAwwJ
+      XA3YvSWKHU9hHnsRSYwitT7KuMdKQywGBlR7bKRTWULhNKIoYmBg6EZFCO4KEtMTQxx46rkP
+      vIWfnJskHL82h7PmAvDMM8/wzW9+85ppiwzDuKFz8qu/8Av89q7dhL1evPE4fV0bactmMKUz
+      ZJ96imAsRn8iTjKVZmPNR/DYbGwrFGBhmvn6IzSc+gFCbQrd0oSYGAVDwCyU0IMiDzeYUeUW
+      pNwAmhhA9mvEilsRu6w4sWKkfQx6mvnqf/1/2NVYzjW+ObDIE48/gVSQ0AQNJDCJJkTpvgye
+      3dc4PS7cbh9zk+O01fkuLzWYmprBLBsIZgfx5RgNDbU3NYNe75nk4mT4mmVrLgDxeJza2lr6
+      +/vf1/qiKNCZO45h5Olq+iLqyBipTIYTyQSpTJbtgQARpUjAlGdJckP1NJIkUzsxjNRRB7lL
+      CKUQeNvRE8sIpRiCoCNbnBTOFtGKTUhuHSF0Dnd4gWzVh9E6d2DU6szMLTIxMcHrr08B0N7e
+      joGBIAiIkoihVzJgdw+RHbv2YrJc0b6RhTlyqo4smzByMXKZLDOzM9TWt+BxWq+LAt3oobvm
+      j7IXXniBz33uc3zpS1/i85//PLJ8c5n7q3/5F17JxjGKRcjlcI0M4qtXEdssLMViPFpfx675
+      eT5hmWTTUpgDchSzVkJauIjFOopca2N65+9C7W6+PRngvNoG9np+ktnOJ/637/PtfI6sbSeL
+      nqfI57ZTrHqKeGsLmiwzVfATkJPXlNgC6Fr5JAqX/2l6ZQK+u8HC9Binz3aTLl5lSVD2DYr5
+      DLrooLW1EZfDRrFYRJIkRFFEluXV140SmGuuARKJBF/84hdpb28nk8mgqir9/f0MDQ1dt67H
+      4+FITTOlgVHM1Uls7gkUyY4vfJFP7XqMKmmGku5myWOiWgnSU3LRHrfiTZsQ1Wn0BTstsW9y
+      TPgQ/8ff/Clz83M0NTUxNTUFwODIBP9XVRWFQoG/+u3f5o35OdpMJjpqW7Hk5jk6XrimPSs+
+      i6Zq5eiPCGjvL8NY4fZS37IBpXcOLZsCagAI1DcRqL+2CM57iyPJrakAmGQTdocdWZbLBWQC
+      1DfUU75/jNX3XDZXvqkMGFoa4hFnHD2rI0/1oTdtQvdtwiemOc1etrnP8pcncrg9VQTcBZwy
+      1DSCkc5iJMc4bv0ZdvuzZDIZNE1bvfkBMpkMmUzZCfr4f/yPfPLffBJFUcjlfaRSefL5wjV1
+      Prquo+rqqgZYeaJUSiHuPKpqYBJyqKJyW7e7pgJgcVj57FeeITI9QTKZxWQyIcnSNU9WXdNo
+      6WhmerSIKynzmNaN7E1i6CJ51y667U/xwr++THT6DR7veI2/HM3z1oUJAP75N34D645O1AkB
+      k81AVWppqnVzdCD0vtuYyZa1kiCUo0nvvLmLhWLZBxDKUaCV9wp3lpnxAWJpA9P8PJs7m2/b
+      dtdUACRJZPrSGG6LRrXLjMVqxWSSwYBiqUQhn0PXJRLBBRZDBsfPTDD0+HNs0VVEl4O/T3eh
+      pqeZmZnhjTfP84M3r2zbZrPR3pXCNfICoimDUTTALtDdN0zPTBbex0M64HPx6w/bmEpb+fGl
+      xPV1/gKU1BICApIsIQgCZrOZ33vqI/zyth18raebUrFUFmit/Ftd1znXc+42nsUKAO0b91Ao
+      GHgarkx0F18KE0nmcCjvLwp0I9bYBxAQJQGzxYKhGyiKgiSJ6LqOoAoYgK6X+3bqukE6neZb
+      F83854e2MV69nb7TPaiqelPHU9DzKM55BAwM0YJa04aSh/LojO/NTneaqlQnNck+vM37+c7c
+      7DX2vSAIKIqC1WJddaS2tbdjS6Vob2zkcy0tXJycQNM0stnsqmarCMDtJxKJkEymyBrz1F0e
+      AcLpdhHPldAwPnAUaG0FQABD07BaneRzZTtfFASMy2bEig9Q7uBcZn9DK9lFiZTJiiRJRGNR
+      JOH6xJOqqkzFVapE47LdrmPkYuyoq6F3Nv+edvqjBw6wz7IBYe4kxaSF5i0Omnz+a34nCiJ+
+      vx+TbEI2yexpb2djoYTm95NIp1lOpggEAhSKBRDKEaNiscjnPvc5mpqayGQyhCPhsjbSy/2J
+      S8VymfUPX/3hbTrJDwbR4BSRRIat7YHVZbMzM5QEM4aeR7S4aG31kc4kL0eByhnjq2uB7ngU
+      yDAEuBxHF0QBURQot+GKU8nl+1cQyibE73/nn6j7X36XH/VfQJIlXC4Xucz1fYydTifNdhNG
+      9nJ9jt3PUKGaLk8Bh9Pxnp1WhsbHOV96kpqqJzBigzA7y9N+H4N79vD9y8Lq8/uQxHI4ze1y
+      s2tqBm1igplDh3gjFkOg7DeYFTMtLS2k02lSyRR2u53PfPozzM7OcvzEcQRBQNd18vk84Ui4
+      0qXyA6Ajs3HzDhqrr4z/09rRdd1691QUCMFAR6BYLF5WPwKGIWCSFXSl3NHEEHSEq5zPHV0b
+      uRAKoqoqkiyhmG/s9S8vL/OPp/L8cu1WBI+Xv9daONJm5VRUJJ9feE8fILK0hM/rQ06eQajR
+      MQrL+IVO/tO27bhbWxAlE12NDciSRFY3MJlkkn4/NpMJWz6/2tNI13Waamo4YrbwhjvPxcww
+      ZrMZk2LCYrVgNptRNRVJlCgKxVVTCsp1T5IkUSwWV6NT74aiKBSLxfd//tcRm3fsXpPtrqkA
+      CAiYTCZ0Q0cQRcTLWkDXNXTdAAFEsexcCoLK0488wn/auYtcoIbvLy9RLBYREW9agflodS1y
+      fQQjEaLavwvzcIyNwIzP/56RmqcfOczGdBqjWIBSFpM7ghGfw214+PlDX8AvzWCZyVHMyWgu
+      J/mSimy1kXG50FVtVcOIgshGqw1xbIyNHR2MKmbi8Th9fX2EI2FEQVztSK8b+jWaaffu3Xz2
+      s5/l61//OqFQiGAwiNfrRRAEVFUll8vh8/lYWlrC7XZz4MABXnvtNfx+P21tbUiSRF9fH4Zh
+      VKaF+oCseSJMlqRyCYHIFS2AjqHrl03jcl2QfpWDohsGhmasmhg341sTQ/wXq4HU2spBl5Ni
+      MAwmE4qilH/7Lvj9PrzOGMVQByZtGHQRvaAgWlJsSPUjWxdRA00sGRsRozEAzgiw2+OhkM9j
+      zqTJFnLIokx/Mom0aydHL13CYrFQKpWIx+Ns9VdxKpkq26SXTamyKVjWHm+++Sa7d++mo6OD
+      PXv2UCqVeOKJJzh27Bgmkwmfz8fMzAylUoknn3ySqakpampqKBaLlEqlcnhWFPnMZz7Dr/3a
+      r/20l+qBZI1LIQykldHVjLJGKPu9AoIognC5wEAo+wY/PHGCP7jQy4ngApl8Bh39XQXgqa7t
+      lCJ28hfiWC6O4gxHmHA6mAkG37NlX/jYLmzVQawtSTRlE4bsQqhuIR/bQPFCCKGoUooq5FWV
+      c7JMqLoKrVRCnp2lZnkJr8NOjb+KjqZGDgCmuXmc1nLkweP1sEk20XpxgEfr6xFFEd3Q0XUd
+      SZKu8wEaGhpIpVKcOXOGixcvEg6Hee2115AkifPnz+P1enn77bdJpVK8+OKL7N27l0QiQTAY
+      5CMf+ciVPEaFVTRNK+eaNG311VzjYnOL/5rXmmsA3dDQjXLvfFESEQUBxLJzXP5fjgKtcG7g
+      Ik1dl2O9BqBzw/E5/X4/+2x2tJADacM2tIUgWpOL/dIZbBv28P9evh8kSaK9vZ1EIkEikaBQ
+      KPDskYOE4iZ0JYlgWiJhbcPiaEBraUF3+rHO/CtCQkOknWw2y27DQF9YwG8yMVtXS20yySF/
+      hMDyFEn2Y9isxFJpisUi2WyWTf4mcnYbtLURliQK+QKarpVLqt9RUPfSSy8xOzu72l/iBz/4
+      AclkklQqxd/+7d+ydetWvvGNb1BXV4fJZMLtdvO9732PU6dO8fDDD/Piiy9iNpsr5Rnv4EY9
+      wn714/uuW2/N8wC6ppXvb72cLBIoR0Q0XV+9+XVDRzDKd6yulT+v9L6SZfmGeiqVSvGno8N8
+      ZZMTpXaEkuJF0obQarvYE3qTL//2l0kmkmzfsIHHYsuIHSp9aj2RVJ4jjmEsI2fIzZiRH2pk
+      qv05ovEFGhULDvsQcpOXoj3AW/lavv+T43xx2za0XBZfbS0NqoayGMbpS5E1N+EqnedN5SAn
+      JsYZGhnFX+Xn31dXI01Nk1VVuoA5r5eFpQilUqnsEMtXLsro6CgA3/3ud687xnQ6vToy9dUl
+      HePj40DZhKpwc95rSBRYYwHIpjNEgklcLX4EWboc7ixb56IgIgoKpVIRTRcopFJUV1Wzfcd2
+      dF3HoljKZoOk43A4aGxsZG5ubnXbxWKRH3d3878frqU0UsLsEdCrOjFNvoLWdIAN/mYecmQg
+      qMPMAIq2wK7AHn4obSJaqqe2tQ5DzTJWvZViQWApJbMx/BNMxUEEESS3n7SuY3PZ+c7cNAe2
+      bSfndLFTFJnY2MV8bJ5DtXlciSiPukY4Y7UQqA2gqRoLXi9uux3r9AwCUCoVVyfdEBBobm7m
+      Yx/7GIVi4cpFMsrnplQqUZRzpFIZCnkVXdMQJQnDYDUbbeg6TreZ8Nwy40MTa3kJ72veaRYG
+      Z6dIlQSqnWYkmxNFktdWAEpqCV/AiWjS0AwVAQmH3cMvbn+Iv+s+Ti43j2TSEQ2D1vZWNjZu
+      obW1lQMHD+B2uQmFQsilFB2NPgYGBq7b/uzsLAV5F2ZnP3pOoTRWQrQL6OEUH2odRxw+Ts50
+      mKWDH0G2luiO5BibHaOxqYHA+JtQcNLV20Or0ML5tgPkTE0IM1lEYZnC8gae0rKwfSsn+y4y
+      ubjIPsUMC/Nkm5sJJQ16XY08ZpmloAs013iIxWJkihmOzs6CAD6HE0EQCIbDq9rM6y13rn/2
+      uWd58oknARAvqzgDg3gizrde+z+JhiYRBDOCYWCsXEijnNnUNINMpoC3vq0iALdAQdVpaWxi
+      dmYaEiEkvGscBhUEdEMDpMtFZPCL2/fTvNzNZ/cc4k9ffeGyg2zgdDpx4sGsmHHYHFitVjpb
+      G+iM/piSu8TxrV2EQiH2bd9OtljA57bhsrjQJs0Uaj+MkBhE8ExTMiSUfD+l5XpSXb9IX0Sm
+      b2ICv9/PYngRURRp8sxR3HoQ2/RrYLUjtrUzObPE5vqdqNkginkRcfQo1kCIn3U2EW7ZRzSR
+      4dXoEns3bWYuuozH68GQbej2BoxiidByCrNiRrfpZHNZBEFgPns5gSeWn/yiJJYrSy87/yaT
+      6XIWsKwRoTwAwGIohu3q0QxWMuaiBIaALOqINoPBkbWfR3c90dzUyGwwgt/tQLI1koyG1zoT
+      bCDJV6JAGPCd/rP84vZ9/EP3iXKpBOUQqNfrJmCtx+/xIIvlGyRXNIh5dhCNRtmzP8DHP/xR
+      DmQy+BtDpBQzMamV5EAEi7UEh36FfHYIR+IcSi6MKXWcHmULY5EldF0nmUyWk1HFItNZB7tq
+      MyxIH6LKpZMtpfiseBZtqQ410Ex+XEd06IjKLJgKKIoJwzCIxhMs6hobN24EA6xWK0dnDEZH
+      RkmmljApJtKZdNm518o1ToIoIBpXkmbG5XHtLw1eIpVKoZiUa3yCYCKEqqZBWj2J5XehHDgw
+      LoeNBfHdQ8QVrkeUFVqa6lf/dtmb11gANJ2q+jqysQj5fIG8IZMqLfJHr71IPp8nny+hlVQC
+      9dXU1dZSIwV4SNNxhiOom8yY9UVKpjaqJTu1tQnqPF5M09MIgoDJKGJSo1jqEzjNRbLd3SQ6
+      djLiaucx/b+BKJHIllaHNpRlmUKhgGJS6A4KXEo6yOfzfFjK4xY0jEwGPTFDfEMn9kUNITMM
+      moC2nEOymBEEAa/bTa3PjsPlRJZkTHI52xvwuEmlUmSyGSRBWu1FhgASl8OeRnm6JV3TyeVy
+      CILAzMxMOTp2+SUIAlOJadwOnfLdvTL9r7iaQFvZ7uWKkgo/JWsbBTLgB//323z+C1+kJJWo
+      CdRgsVjIZDLIskxJLWFWzIQjixBXyNvz6LIJSRKpjh5HXRLRxt6guKjw0IED/MOpt+h4fAOL
+      vo8S6Ps7amMTSFV2SmEXQo2DgVSKSDxOpuHTFIsFpqYXMASDklYik86g6RomkwlZltlbo9Lp
+      yDMYszCr1PJIwyJSp4u/PR3mC088SdXpbhANEFQcFhHZJPPpjWnInqXk2suyUZ6ppEqxsLVY
+      or2jne9e7Cefz+PxecrhWww0TSs7/JKIZJSTgrJJppAtkNbS5QiYICBJEpIkkcjFcDspP/nL
+      NSJXhYkFRAHKkdTK4/92sOZ5gEKuiIiAaAiUCkXsFhtmk4LNZiMWi2ExmRENkVQqxfDIMLlN
+      m9na0sR+ey1mbZ5M6x4kc4p/OtfN05sK/NPrZ/nlfbMUlwNILg/GUgxTQ4nvxGuZn5vG7XHj
+      c9uYWiigGRpqSaVQKKCKarkas1Si2majLTbKnL6Vbc4wxI+Vh0j0ddDRepgh4FFfNUY6Qqn2
+      APXeFvw1TZhMg8jxUczhIkXfw8TkGopqcTWTrWsrod3Lpp2ur3ayWYnTy7KM2+lGdItoqoZG
+      uaxipaON1UiBIXLZPnzHfb6yoFJMd7u4IwNjiaKISTaRz+eJ6lFsNhupZIpSscTc/BzpdJp8
+      Ps/mllZMVyV1Yk3PkFIX6S6E+Kdv/jfs8lZ+aZcVcfEcSlUnsi2NYU2hZmrx2Oy0VVezXR7G
+      MfUDGgNH+NuJIiW1hN/nx6yYV60Kv89HJgH12RFUtYCcGEPwqGS9O3D4dxIUYXrvr9M0+n3m
+      A4+z6egJaHYz1baBVrdKMp1lPjdPf2iKVDqF12ZjfGSYdDqNKIkUigUkUbrGXhcoP+VLaql8
+      s+vGlZEmLg8CxuWHPnB5/KKVp//VknBFwCoW0E/PNQKwUrUpSdLqOD638rlUKlFfX7+afUul
+      UtTV1+FyuigWi1itVhSzgtlkRhAFVE1FR8dkMrHN4+XwcpRiMk3GK2FZPIs0NoY866S2uZH6
+      +nqsFgVXeAjRlEdUQxjmTahyM8U5OOTNkvZ5MQ+PItTr+PVFPJ42YtEYm9raWEqlyj6AolAy
+      mylt2U5h2o2aW8bnuAA2D4LFBNEYgZoAA+OTRG0P03z8FOZcN0oijSN3gIv2J4iLCRaWk1jM
+      FkpqiVgmi9lsweFwoJjL2k2WZERRpKSWsJgtCIJAoVDA7rAjCiJqSQURJKEsFIpJQdM1nLoP
+      v8cOCBSKWcwmMwgixWIORbFiGDr5Qg6TZKapAUJ1i6s9oFKpFIqikM1mP/A1vBc+K4pyuWJW
+      JR7L4fE6icXipFNpmpobb/0uNzQGh0bZsnnTtcvz8WsFQLlqUNEPQjqdZmFh4Zo5wvL5POl0
+      mnQmjTljLh+cJGOxWshms6QzadLpNB0WCzoGJpsV/8IMCUs1jlorC9ZOjvX1MTc7x4/0FP/2
+      035Iz4GuMmXeieyqxesRKabM2JeXCdU8i1SvM5r0IOZmeai6iodmZumvraEnEsbv8XAwlcZ0
+      /G04eABL3VZKp95E8tXy1ycSXJp8gZamFkyKiR1OF9YdtZjHU6hSHT3ZNo73nCZfzINRNmdK
+      xRKpdIpYLIau6ZgtZqqqqlbDmrqhk06lVzvTZzKZa7SCQXkyblEoO8KJdBTFiJaf/gIkDcrl
+      I4CRuVxMqOtomsrcgkEwGCR4Ve1TsVjEZrN94Gt4b5Gmt2ecI0/upaenF5vZRCoRpW3jVhZm
+      J+no6GRuchTB5kPRMywmS2zd2EFiKUQoXsAiqDR2dBAcG0CwBtCLGRbCMXIl2NDWeL0ArAUr
+      /WhzuRzZXJalpSV8Ph+iJJJJZ0ilU+RzeV692I950xY2mRTkKh/ubBhdlnHb5/j0Livtri/w
+      Rn8//3Wujd9sERF0ldOTOX5BeQMjkUA1tnLM4WMsGuWL9g42Li2x1eEkmkyiZzJENY0zp8/w
+      3x1+FNNoP0Y6DS+/gtHeTi5YR0JsYmx8hKHhYVrrqtlq9REUoG72HIKiQNGJaHJh1qfo6R9i
+      fGJ8dSSLFUcWoKa2Bp/Xhy7omBUzsiCjGRqiLCJQToatFK+tdKEURRFREJFE6XJ0Z6VW6rLp
+      JMuIorDqC68MJvCgzVOQz2XZ/dBeTp58G6si4tCzROUaNrisLIWiRIbP0iObiU3N8MihXfRc
+      uECVXWO+4Ma+dIk5vZrBJTPWQqgsANwBH8C4XOvjdDrRNI3wYhjFrFAoFMgX8uTzeYrFIpqq
+      8a0zZ6gKVPGY/zE2tjyCLEGzOIScTfCcAPVPP83r/X18bWE/uVyWUHCGTzxix7BaGMjX8PKx
+      Y3z5Z38O06VLmNrb6ctk2FzjRimZuTQTosmtcHJhmq3b2/AGX0PPK4Samwi6nfz5Sy/xyltv
+      8T9/6VP8T/tzjIlNtC6eR1bDCIqLqaaPsFE/Q+dWjWyxi1defeWGBWijo6Mcf+v4Tc9HVVUV
+      v/Irv0KhUEAUxNX6KEFeGXRrJe4vYugaoihjVhQkk1TWGIZBPl+gWMxfU0S4PrFRKMXJpZaQ
+      LA5kLY+EBoLEynlaefAMjk6yZ/MGRnLvPoNPdaCafOjKFLdrLgDFYpHe3t7yU8vQicfjxONx
+      FLOCqqkUcgVKpbJjqOoqtfW1DF0aQlM1Ghr///bOPEjO8s7vn/fo+5q+p3tuaTQaDRKYQwgk
+      AYLYZsHrIwQCazsux1vF2vG62NiJSRxXuSq1tRXvxuXgIt5K1nZwUdmsjcHrdQiUAQmDOCQh
+      JEYXmtHc03N09/R9vmf+aGmkQYMOS0IjqT9VM1Pd9b5PP/3O+3uf5/c8v9/310ZEELC2hFG6
+      ovjtNgI+H+MzMzhtdv7Tp+NYgB35XvozSf56YC22if8LUpls1cAfixOY+d+Azr+LdyO3TWDK
+      SRRJQXJWEa0a7xcKfP4738EwDMKhIP/m/uuRZn9Hb9yLaB06HrkqM1oqULK2oygKM6nTRb3O
+      F0FsJL20R6Igwmw6fXxUOOHyNn6LkohhmsimcFxT1UA39MbS6TkEe13ZWNm8aQPDkwvcufkW
+      8gtzHHp/jK1bb6daLOD1+VDHhskWZa5ftwZFsrE+HsJsdTE5k2b9wABur48uZRQ9tIF4wIHf
+      sGEEBhrNu1svvQGUy2V+/dyvz/n4VT2rqNaqiIKI12pjTNjAQmaBTp+T9nf38ZlYnJ9mMsTD
+      Piy5DPp8ktsyZfTZDPbVSSyWWTTFQ7A6RlhSACtQRpYaEZSCXkBcOIym+ZGCPsYOHsIwGiPU
+      X/35g3jnhtGENQjuGMLcPkxRJqd3M5PM8+r4OOVymVK5dEFrME6nk2qmSjwc5lPHb+LnA0Gm
+      5ueRjkswAsd1lGQscsOhFgDNaETMGiYIwtVuAODxR7je30iE94da8YdaAbD4GrnB7T1rjh8Z
+      OHmSq5WW0MmXsc5VJ9sDsB/PK5btK69AxvTUNG63m3i9juuVV7AFAvx2dpbfzs3xzU0bsAUr
+      lIsl9qfShK0d3OuLYkzMItoFLJ40gmAg+n3k123GP/sa6GUQZEBtzK1FA9FrYY+tj9275/jh
+      879Z2gFBQ6zOIR4+jBHsx3AGeHmslYm5qcV4/wtBEARCwRDphfSSSFBN1ymXK7R2RKkszCNL
+      AjabFavFiiwd3xcAdENHlmXyuRqt7eeXAN7kdFacAfSu7iUSjnALR6kaU2SrN2K1Wmnr7CTU
+      nme4UOPe63z8aleJnz+/izf7evn0zbdw6/TbYGqYhkR6zZ8wOjnMbT4/RsZNreN2rGoJaf4A
+      glVGcsmodTsur87AugF279lNsVjkO0/+ipc238qXt97CzRGdajbG/9w/ztP/8ASqoi72UdXU
+      PzgMwTRNjo0cQxAEZtIp/qnFT7lc5s09exo3d1agXGqkhVpkFZu94Tw38okb839N03C5PaSm
+      zl0Br8nyrDgDMEyDzpgPod2BI5vkrY4oC6/vbvgPeg/9/jo7tTZ6OkyUukJrLMaxSoU7umuw
+      IGAKLpzZI8zIvaRb+xh03k7J086nRv8PWlZC0zsQb9rM7SNvcNvWTro7ruNf7d+HpmkUS2Xu
+      u7WHDXmd2nSVXWtEFgplspkspVJp2f7ed/99hEPhxo6vKGDqJn6/n3gsjt1pZ25mjlQ6hSiK
+      SJLUmNZIEnWlTjAYxOZ2Mzo9xfbt25tZXReZdDrdqOt8BlacAUiSRCqvYNYnMSsqq+0+Jtb0
+      kZhN8J+fOcCn7v04d7sPseV2Cz9xrqOzexWFYoG6RcYu2zDLCi55lvv9brREB5WOVazLvIaQ
+      OopajiF75tCrJYRSBrFoZ6xiX/zsxx99iM+0LaBPzlL2bSAiSbT4fHR1dS3Z24DGk1xRFJwO
+      J/6AH1luBMfl83m8Xi+tsVZsdhu6qjdWfOTGUqdu6CiqQrVSpfumbrbduW1J8ZAmFw+bzXZW
+      mcQVZwC6rlOulHm7+y76W2HW5SAYClIoFfjTB4O0WYcwcrPolg4EUSTQ1YFbltg+4+eedZuw
+      DT2PMPMulukk5pyVuyp/jCUaQZIqWFwJJGcFKfk7dJsVQQZX4OQFGhxOYF7nQjSrWFw2uhWF
+      69f209oaY+3atdTrdVRNJZVMkc/nyeVzlMol7HY74VAYm82GJElkc1l2vrGTcChMrVrD4XLg
+      druplCrouo4iKCCALMnY7DbsdvsZrkiTD6OUWyBdrGMTlJWqDXr+VCqNzbL3pyYQVnVQPh4z
+      1B6OEFvYjyEpWOKr0VWR3rYuul78HU6LhV03fYyKTcMRjUJJQFioID/yH9F//nfYOg9gSgZ6
+      vREPJLo11GI7ZtqkvfPkEHlHrwt9Uka2VJnrv46SRabD7aVVU1nXv24xuE1RFNKpNO/uf5f5
+      +XlsVtti1KfD4aDF10IunyMYCKKoCna7HU3XcLvdCGJjN7hQKCBKjRFBO6NXpwAAD8BJREFU
+      1dQzXJEmH8bM7CxY3cg2eVltUF3X0bQzbxauOAO4ub+dR26QkYUM9soBai29/EPKx9q6wlHP
+      TfSXd2FUS1jGptlisyN4Tao1AWupTH3tjWhGmnpkI8aNG5H2HUCOWtArNiw+BdFiIHuLIMhY
+      QwVMwYrDOLmq8+xbU3zhX/SjVtcyVS2jazZabHZsdhuapqGojcojSl0hoKT4590qY+EQuyYV
+      srk8DrsDSZRwu92USiV0XadWrzXOVRQ8bg+q3tDz0Q0d02hkh51Qlm5yfgQDAWYyJSxmfVlt
+      UEmSzliRCFagAXR4VEZLXq4XDiEYGo75d4gGH2Df2CSfTAvs0bu5pcNEdFRxCfuQAirmwDdY
+      649icbhZ6PochmFgUeYp37ON6JABB3JUp4sIa25AKu6gNhtBCLVhhCuMFE4+Id54Zz/f6u7h
+      ew/30y+OMG67AcM0yOfyVMwJ5lWVYrmCE4UbEs8i1aeIRz6G07qaLI0MsVw+R7lSRrbIuFwu
+      8oX8YlyQqqtUq1XUurq4smMaJrrW9AHOxpH39pLKl4l39dLb1cjqCkbjBKNLjzubNujoTJaf
+      Pr9v8fWKM4C3EwKPd2XQSx7Eub0o0lYG1uTxdro5kEry7kyFUWcPn+2U8STnwB/H2R7ClFsW
+      tTMd+SOU9/8c2RFBEBSE2ixKtgfN3gfRtWhz7+Hw1RiJ/hHvvfd7Pv6Jj1OvNUITAtFWKqqG
+      xWJBlCQq5QquShXrO3vxtrbyt6/uIJ/P8/BdNxJr6WPwWJ3Z7AT+Fj/1eh3DMJifn8dhdzR2
+      uEWRcqWM1WKlXqujKiqqpqJrDWe4XC6jqNem3uf5sO6Gdbz8Nz9DsDgXDeAPoVxTl1SKXHEG
+      EPUHEBZyGKILyTSwOCaoez/Jptp2tD4Hor+fG6MCnpFfopetmF23ojhbKedyDA0PUSgU8Dit
+      xELXo4oWBKGG3hMg19ZLXNiLsWcYq92CZJHpTh/hq1s2klNuYU8mQ8Dj4p5oCs3XzaTeilpX
+      GRoaopjNEenu5u9ef43nnnsORVF44YUXAHj4kYdpb2+nWqviUlyL9Qwq1QphKbwkF8I0GnFR
+      ut7YzNq1axc7d+6kWjld/brJB5G46+7NaDbXRW11xe2lbw06ELPjyKVDVHIbIdJPS1XHMvMy
+      jpEXuL1Dxq/NNJJIrCBXj1DOJkkmk4yNj5GYSVBTTerRTzBRW82vj9n54SGTH+/eTU4UwelE
+      VwNoKRUpd4TYoV8wMPM8227fzLZVAlZPCL+awOH00CdIbI5EKVbLfPMXv+Anv/zlaerMptnY
+      j6jX60wlpiiVSovHpNKpRUfX6XQSCAZQVAXDNHC5XHg9XjC5oBD0a4WZiWMcOjqKr6Xlora7
+      4kaA6fIUq9fdhZh8D3t4AnQRV2EPuupDFAtEDv4Ms/16TJwIbhu6ZueFJ/47edNkYG0fd7VP
+      IKpDvP7OdQwPDjJ58CDFVauYm5/j06+O8+yffQVvehhLRAZ1Ac0uYMoSsTfexLk2h5g/iqp1
+      4eoH98gRJFUg6PaQzWaXlSY/IWY1NTW1rLpbk4tDvGsV3n3jzExNsbrj5MQ/l8shGCqC3Uul
+      kMXv95918+tUVpwB/NXTOxjbOoruaONPbxqgmhQJeN/HtLvQCzKm3cMPXlP5bPR22lpV9KKD
+      6ZFh+jZuYpME8uwRaF9PUBmhmkpRLxRwFYrItTqdoTBJj49grxWUPGalhKG1ga6iTx1Gd4qI
+      wgJaQiTEbuyBIcrVPqrz6ocGvz337HNLspqaXCpEfF43gdDJKLdCJsnozAIBjwMzl2R8okhH
+      e45YRy92i7DsMqjxgXJbK84ABgcHGRwcBKD45Qd5dFUAVfVjtgT568Ech0YTvLzzBXr+/ZdY
+      l9gNLW20r+0lJ4ocjXWyQVmHPXMAxdiIoam4giHUTJpNnd38cW87XeXfk+q5g6LjLnoq+5Aq
+      eYTEMI51XpTgvah7nkNJ2XH1pWHyEM60zqauDbzwIf1VVXVR9rDJpWNm4hjJbIl4n2PxvVy+
+      QCmXwyGqSDYvH9sQYja1QDKZpKczvuwyqCgunW6uOAM4le8/9SuKDz3E3vFxho4dI5tt6PT/
+      0d1389m4ClUBCgmsth6SBw5yJJNhzZ0ehlu/Tk/pTV6qK5woxzQ6NcX+9hDtHV4OyjKmp4P/
+      8YuXuG51O/+6o4Ds8qFk89B7N2LlXcTcXkxFR/O3cWh+HpfTRTgcJpVKXd6Lco3iDbRz9z1x
+      bPaT6Z6dPb109vQuOc4fin7w1DOy4pzgD/LjZ55h1549izc/wCs7dzJt6A3zNaElFOAT27bx
+      6a4uHIlZNqSf5t1jBo5wBF1tlDHNZLP8xZM/4YtPH2Z02mDPP/4ToXCIllArauBmaskOTKeP
+      CVlGvu8mxNo8orWKscqF0+ulr6+PQCDw4R1tcklxexy88dpuEsfVsi8WK94AlkMQBFJGK6Yu
+      QaCXu9caDHjySMfex0ikqedCFMsSq9b28cVH/gTb8VibYrHISzt28viffY1db71FKBji/u4q
+      1rHfYVdfwZ74R+Z8Lsb1IJoZxwjdQCl0HZ8TJe5af91Zq840uXRcqkrxV6QBeDwe2m1rUNJh
+      atJt2EZeRs6+hmMj6J4bmWm5jUy+wB3RMN1TO/nc/fee1obdbueOXifvG6sx2jegJepIyhBb
+      0m/R7a+huO6lcjSMoBjHa5mJTTG2y8iJSvGzicRFbXdF+wCnIkkSDkfDAapUKuyZnOCflXsx
+      cvNUw1/AbRvG0HWMQhlftoDdYqUmHcZ0ROj3TFIul3A6nSiKgqZpfPKWXvqqu9G8KkZCQfbl
+      MXQ/5Is4hp5FiW9DSzlYmE/ykqZyeOjoZb4C1zbLVYq/GFwxBtDd3c2DDz5IKBSira2Nr3zl
+      K/yXr36NHqOLwQNj/P69QX5436ewRQxGBYG3SxW2lGLYbcf4zREZ57oB/us3vwXAU089xV/+
+      7d8TefxLPPP0/+POgQG+ENjCb4suHDY7qxxr+PO//Dmf3bSJn/6vn1Gr1QDI5/OX8xJc0yxX
+      KT6XnmdkOonbaiJYJKanCvQP9BBvbT3ndq8YAxgZGeH73/8+TzzxBN/+9rfp7+8nvGED61Mp
+      BiJRVn3xy7xerdK9Osa3vvtdHvvqV/EOjaLbupmbSSAAr776Ki6XC7/fTy6b40v/4UcAvPjy
+      Dl7ZupVXdu5csqS5f//+y/Rtm3yQ5SrFIwj09HRTyC1gGiY9nTLp5Dx1xaCzLXpO+wBXlA/w
+      0EMP8fbbbzM9Pc2jjz7K1/7tX/Djw4f4dS6LbrHw9W98g2OJBHa7nRe2byexZTN7ZJn/djxu
+      Z+vWraxfv/60dXtVVXlxx47mev4KZrlK8YZhsLCQwe9xEYrGiXd009PZTiQSWVTbPlGY/MTP
+      FbUPcCqxWIw777yTxx57DGBRw3Tv5CSrLRZ81epimmJbWxttbW088atnKBQKZI4vob744otM
+      Tk7ywAMPsH379sv5dZqcJ8tVig+EWwmEl753PmEQcAUZwIYNGygWi3zve98jk8nwgx/8gMce
+      e4xSqcSTTz65mLP71ltvMTk5yW233YbVamXHjh0AjI6O8sADD9Df38+PfvSjy/lVmqwgBPMU
+      KQJd1y8oMjGZTNLd3X1aAvlHTV9fH0NDQ5e1D5eLHTt2sG3btsvdjY+Uo4cHl3WCi8XiafnB
+      B0aTfPcnJ0f/K2YEaNLkw7C5vKc5wT2d55Y0c1UaQLFYvNxdaPIR4ve4EO1erBIo1RKi3Xf2
+      k45zVRqAx+NZopnf5OrGd4onfMIJ1nV9cf/mVEJuiccf3rj4+qo0gCZNJEnCbref5gN4PBCL
+      nEycv6L2Ac6V5hSoyblyVRrA+SiDNbm2uSoNoEmTc2WJD2AYF6ZQJooiW7ZsoV6vX1A7F0os
+      FiMaPb/MoKuFE6WormREUTxjmaNz5Vz2tJZshDVpcq3RnAI1uaZpLoM2WbGkkjOkkrOEI7FL
+      9rc5BfoA48NH0K1eVne1odTK6KIdh3X5uWRqZgp7IIbHLoOhsXvvILduvOlD2zYNhWNjs6zu
+      CPHe0UnCLR7aO5ZWPp+dShDuaDvtyTT47h76NtyM3XLtDNqHD+5lYP3Nl/QzmiPAqZgqk4kM
+      W7eu5tm/fwqXtwU52MH0wXdYte56aqUSvpAfTTdRi1ls/gjOqVFma3Y290cZGRnFajHQBRvz
+      UyMI2Im2RTg4PM2X/uVnWJiZwO6NYigVBg8eIB4JMzk2gmyTSM5lEa1WTA2soyNYDQ2rRWR4
+      Os/nH/wkk2Mj1EyRSk1AUGapVQT80TgHDgzyyOe/gMt29ckrhiOxS9e4qbPvnT1NH2AJgozL
+      AUeHj+Lw+AmF23DK0NbVi9MikM9m0QwDwzAItcZx2WVKdR2nTSSVyhCPBUmnc3R1tNEajxFv
+      jTE3nyEQ8AKQSJWIhzwgWrjxhvVUyhUMw8DQDeKxOPFYDLvbhWA2yoMGW7ys619DaSGFIxij
+      lEnS1d1NMBKlPRankJrHHwqiXaX1BVLJSxfOUpgapGyNNKdA50o5n2YqVWLt6m7+sBU6k5nZ
+      OeKxS/hUu8pIJWcIR/5wKfQzYShFdry+98INYLmY66sZVVXRNG1RoeJKo1Ao4PV6L3c3zsiJ
+      e+qj8AFW/BTINAyG3z9EMr1Ard5IcD5VpTl3hSs1KLUiRw4doVAqUy4VmJpMUF1GhXolUcwt
+      MDw6TiIxjW5oTExMMzc9wfRs8uwnnwcnfIBsaoaRiZN6QNmFNJXayc3WWq12WhnbSqV8Tp+x
+      8p1g06BcqWIuzJFLZ6iZIkoxSTAUpaIYuBwy4+8fwBGIsJCrs3njhsvd4/OirlTRFIX0wgJK
+      KYeBE80YZ+hYgtagl1hXH5HAyhph67UahglqtcDIsSo13cRnkzHki2u4jaXKOIWygtcocWRc
+      QK9VoTxLWfRj18vEVw8wN3YY0xHAa9EQBBlPIMjwRILusIeSJlPPz7Nq4Cbsy9ztK34EQBBo
+      7+phVVcbNqcbpV4hFAxiYmKaBjarBYvTjSTKyHqdK03XQZJtBMNhHFaZlmCEtlgESZRp7+jA
+      7/OuyMhW2WJBVWo4fRFMQyfc4kXT6ijqmSsyni8nRoBqMcPIzAK52TF2vrUbT7CdqFcnnauR
+      XkjjCUQwlTK733yNRL7G3t3v4rWLjBw9yO79B7G6fMve/HARQiGaPsCVRdMHWMoFT4EqlcrZ
+      D7qK0DTtnOrPrlSq1epFCTT7KLik+wDHuWADcDqdzRHgCsI0zRX//zox7TvhA1xKVr4TfI6Y
+      1Rx6enjJe4KjBSm05jL1qMmFckWMACsFffY9qr/5+pL35NX34PhMUwTrSmZ87NKqcl81BtDk
+      6iMciRM++2EXRNMAmqxYMpkUczOT+FqC5HMLl+Tv/wcs7kMsKOLuOQAAAABJRU5ErkJggg==
     </thumbnail>
     <thumbnail height='192' name='Dashboard TreeMap' width='192'>
       iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
@@ -5175,6 +5410,124 @@
       QmkSgFCaBCCUJgEIpUkAQmkSgFCaBCCUJgEIpUkAQmkSgFCaBCCUJgEIpUkAQmkSgFCaBCCU
       JgEIpUkAQmkSgFCaBCCUJgEIpUkAQmkSgFCaBCCUJgEIpUkAQmn/H+//8NJDex4KAAAAAElF
       TkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='Daño de armas HP' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAYC0lEQVR4nO2d2W8kx33Hv31N91ycm+dy75V2rcuO5SixpByOZcOwHRiBHTgw8pCn5A8I
+      giAwAj/lyU8J4th5CfKQBDASB4EBJ4BhGBACQZFtWZZW2nuX3CG5HA6Hc/VM31V54KHlcrqm
+      KQ6HR/8+T7vs71T9urq/XV3d9auWOOccBBFT5KMOgCCOEjIAEWvIAMQuHtz5AHcXlwEAjtmF
+      7bNQ7Wp1AX1vczvnHG+++X/Css36ElaaNtar9/BgeQ3V5ZUnFBzVanXP75hn461fvLO/HYmI
+      eiilEieWh4/W8VuvXsb3/+kfkcpXULxwBTfefB3zTz0Hy3VwrpJFz1dht2uYKJ2B/PCnaPhZ
+      vHw1h/dvrSCh/xLJlILb796BnDQwOzeHD+4u4Y+/9iU0pQzmCgbu363hrlWDajdw68YNSIoO
+      xzVhGCk4rTqqy8vomV243QaMyafw7IyGu/eXoXAPCU3G/QdLUHUd05UC7j/q4mtf/uxH3l8y
+      ALGLXFLDnZs3kZ2cQXFqDglVwrnLH0MuraJWrwGVCQASpubOQ+EczZ6CXEpDtd7H80/lsbTa
+      w+d/9xrslg2ua1htmJitFABwsPoi5HIeyYkcLuYULK7YkAJA0QzMTeWhcY4md6AoKs6ev4h2
+      LYHJ83Oo1x/i3KSBhsnx0rPTcH0Jqiaj3uhgspA50P5KH/Up0PbPJEk6UACEGM75sWjjXruB
+      lUYfly/M4yOFwzkerdYwMzM9knhG1S4f2QBBEMC2baTT6QMHQYTT7XaRzWaPOoxjx6ja5dQO
+      gh8tLeLeQhX9fh8A4LoO2JbVO50WAkavP4bR6zRx88ZNdLt9dDtNLC0uw2Hhg+KTyKkdA5im
+      CduX0dKBd37xDgqlNHQjB6vfBdeSyGlrWGxYMIIunn7hJWST2lGHfOzo93tgroXVehOu1YAh
+      GahW7+He/RomMwrOX/sEChnjqMM8EKfWAKXJGRSLRayuriCXSSA1UQL3fUACDMNAwBwUJtJI
+      QobZs8gAA9CMNKZmNFi2j4mpOWRlGeu2iYvnzkLnfZhm78Qb4MBjgFQqNeqYiMegMcBgRtUu
+      B+oB+v0+2Cm7JzxuWJZ1LJ4CHTdG1S4HMkAqlaKnQGOAeoDB0FMggjggZAAi1pABiFhDBiBi
+      DRmAiDUHfhHmvvOv4ObawG1y+Qq0q188aBUEcWgc2ADe+/8JtnZjcOFXPkcGII41dAtExJrI
+      Bui2NmBbPdy+cx/BYUZEEGMk0i0QDzws3LqJZGkKLGFA4hx+EIAxBkkwlYhzDt/3RxZsHAmC
+      gNpwAKNql0gGsMw2bD+AnjBgr63AmpuDoSiQZRmQJIRZQJIkqOqpnXA6FhRFoTYcwKjaJVIJ
+      qVwZn3r51c3/nJ0DAAR0H0ScAmgQTMQaMgARa8gARKwhAxCxhgxAxBoyABFryABErCEDELGG
+      DEDEGjIAEWvIAESsIQMQsSayAYLAB+MMrucdZjwEMVai5QNwhutvvYHk7AW47RYuPfMstO08
+      AOHKohz0FdaDwTm14SBG1S6RDNBv1dG1fbidHqYyBgIGqOBgjEEWOIBz0NqhB4RzTm04gFG1
+      SyQDpAtT+M1X8uCygmazg4wmIQjknYSYMCRJgqIoBw4yzsiyTG04gFG1S+SUGkXTAQCVcvHA
+      lRLEcYGeAhGxhgxAxBoyABFryABErCEDELGGDEDEGjIAEWvIAESsIQMQsYYMQMQaMgARa8gA
+      RKyJNBmOeRZu3r6LZCKJHpdx7amLhx0XQYyFSAaQlAQMTQFTFPBuB47PoTL6QMY4oA9kDGas
+      H8gIPAcBVBRzWTAOGIoELtEHMsYBfSBjMGP9QIaqp3DlqacAAKVSGQDoO2HEqYAGwUSsIQMQ
+      sYYMQMQaMgARa8gARKwhAxCxhgxAxBoyABFryABErCEDELGGDEDEGjIAEWsi5wPcvreAfL6A
+      RquLa09fOey4iMdgjgPrF2+HbtevXIZaqYwxotNDJAPIqoGEFGB1o4tLJQNtlyMtUT7AOAiC
+      AF67jcbf/l2opvBnf4rkKy+PMaqjZ6z5AJ7Th8dVlDI6FhsWrk1KAKN8gHGgKMrQdfBlWY5d
+      O481H0Az0nj66lUAwPzW3/abD+A/eB3cMQduk3NzUGZeAACw/gbAB5cuqQYkPbvPmuND0G6j
+      /f1/D92e+exnkLhwYYwRHX/GdtlwXv822Mb9wUFc+zKSWwbo/9vXwTsrA3Xac1+F8dlvHVKE
+      Jx/W78P8yU9CtxvPPUsGeII9T4Hefffdo4iDII6EPQZYXFwkExCxYc8tkGEYqNVqeOONN/Dp
+      T3/6KGKKhP36twF38JhCmX8J2tNfGHNExElkjwFee+21o4hj3/g3fgjebwzeqOhkACISewxg
+      d9bxv2/9Cr/2G6+imEkcRUwjpfcvXwN3+wO3JZ77KhIv/smYIyKOE3sMUF+swpdd/PhHP8Uf
+      /OHnoR1FVCOEtaqht0rcao45GuK4sWcQXDwzh6DloDKbP4p4CGKsDJwM59oWLXxFxII9t0Dp
+      wiS+8kdfRxCw8b0lOwb0/vn3wdnguSWJj38DiU98Y8wRHR6s14P19i9Dt+vPfAxqsTjGiI6O
+      gef49bd/hqXVFj7zxc9BH3dERwRrVQHmDdzG7faYozlc/PUGGn//ndDtlb/48/gaIPBdpFI6
+      +j6DeAoWcdoJul3Y7/wqdLvx3LNQ8id7rLjHAObaQ7x1fREXzp7Z+RvnHGa3i2QqiW63j1wh
+      N9YgjwucMzg//lbodvXKa1AvvDq+gA4Zv1YT9hST3/yr02eA3OxlvPxxGz9/rwq29TfuO1iv
+      12CZFng2j1x+ApxzcM6H5gMwxnb+LRDu6ETwqDpgtLrtejmD9/4PQnVS/izkc6Odl88YE7fd
+      Y/GNXcc2dazdhvPe9VCd/vzzkCdGO4uXMRbp2A1j4Big3euhu76xM8+fMw+mzTA7O4XFB4vo
+      n52HceCqDxPxgduvbN8wH97NH4VuVqafhVzcx1d2hsQZdTf4gH8JdRHr9VZW0PjOP4TqKt/6
+      a+gTWQTNJuwwo6gK0kcw9Wbvm+D2GlbXTUxfmt95CSYpBqYni0hlMrjw9FVkVAlBIEGSJECS
+      QguXJGkzaWbr36Ht+ZhOhBRVh6jlYV/18mEXnG1d4MP98TdDZfrv/CXU8uWh9QKb8UlyeBsD
+      gLxVryQ4Frt14n3e0Q2rV45angxZluFUl9D87vcGaqRkEtlXXhGWs7tuOdKxG8YeA3RbXRQn
+      J+FsdOEASAKQVQ2VrZzTZDJ54EoJ4riwxwCVc5dQAdDvdE78NAiCGMbAPmRjbQU3bz/AwYcY
+      BHG8GTgIvnv7FmyWhPgOkCAOh8A0wS1r8EZZhloqjayugQaQZQWqHKeJEMRxovMfP0D3v/9n
+      4DY5N4Ez3/vuyOoaeAtUKpdg2Tb1AMSpZ+Bl3nVcyEMeqREHh7s92D/9m9Dt2se+AuSvjjGi
+      +DHQAHavC1XPjDuW2MEDF/4H/xW6XZn9OBngkNlzC9Rcuo/lTg9nL16O1XRoIp7sMYAfcOh6
+      Au+//UsMnhxMEKeHgS/Cfu/cpaOIhSD2xc+XHuLexuCVQdKJBL509ZmhZdBdDnFiedhq4u2V
+      pYHb8kYykgEizSbinKPVbCIIfLQ7g1dYIIiTSKQegPsuWq0NLFZXkE7IUFNXoeM45wNELW//
+      +QDDCmSMgbOI8+1HpGMR5+9/qBPvB4taL4taHosWX6Rz5cNcgGHTwKMc22g9QOCibbrITyTB
+      OE7AC7KIER7Sjoy82CEFRq1PGvAvoW5k9R7fMyZSDyBpBubnppDOZOC5PlLHPh8g4jz/qLr9
+      5gMMmUe/XR6LqBs2z//IdBHzAaKW9/i5El7Yh7kAw2wV5dhG+0SSoqG4tUqAnjj5yyUS8eKH
+      N67jvdqjgdvoKRBx6ul7Htq2PXAbfSaViDVkACLWkAGIWEMGIGINGYCINWQAItaQAYhYQwYg
+      Yg0ZgIg1ZAAi1pABiFgTeTr0BzfvoL26hOu379MH9IhTQ7Tp0EoCxVwGkqbAN2uwPQ6NB2CM
+      DU2I8X1/599RdKIsB8YeK08Q767yBLCoOsY2dUPmQ/NtXSC+RLB96IIgQBCxvCAQxxds65i4
+      vG0dG1ZesKUbWl6wpROXt30shDqOrX0NwIYk2EQ59yIZgHk2mq0WlHIZE8VJJFUJnCmb860F
+      8/wlSYKqqjv/jqITTfKW5cfKQ7gJdpUnQI6qk2Woqgo+5ABK2zou/rradnlMGa5TFAVKBJ2q
+      quCKuENXtuuVxeVt64Jh5SmbOn9oeQpUVYU3ZH7+9rEQzuOXNnWKogxdvO3xcy9UIyxhC1kz
+      cO3aNQDA1mcC6DaIOBXQIJiINWQAItaQAYhYQwYgYg0ZgIg1ZAAi1pABiFhDBiBiDRmAiDVk
+      ACLWkAGIWEMGIGJN5HyAu/cW0G2u4733byEYtjA7QZwQIucDZFI62j0b58spdFyOtET5AHvq
+      pXyAkPKObz5ApB6AeTbW1tagqgqqLQe5hLQ5H3vImu/b8/JVVY2si5IPoKqqcG34XeUJkKPq
+      tubHK4pYJ+3oos3fl0ecD6BEzAdQIuYDyBHzAeSI+QDD1uvfPhajzAcYdu5Fzgd4/oUXAADT
+      05t/o3wA4jRAg2Ai1pABiFhDBiBiDRmAiDVkACLWkAGIWEMGIGINGYCINWQAItaQAYhYQwYg
+      Yg0ZgIg1+zKA22vhJn0fgDhFRJoNuk231QGTAM44WED5AHvqpXyAkPKObz7AvgxgZLPgjSo8
+      LiGh0PcB9tRL3wcIKe+Efx9gm/REAc88XwAw9OJFECcCGgQTsYYMQMQaMgARa8gARKwhAxCx
+      hgxAxBoyABFryABErCEDELGGDEDEmv3NBu13cOvugnAiGkGcJPZlgLWNDqYzMtruYYVDEONl
+      XwbIGBoW6yYy2mGFQxDjZV+zQfPlKeTLU5vz7RmDZVmAMQuWdQbqFa2EwDQBAHZyDiwbEoRa
+      3NFZqXlwbgzUeUoe/rYufQ5cyYXocjs6O3Me3OsP1PnyBLzt8rIXAeYN1knpTR3nm7oQfKQ2
+      db4j1AU8Cdc0wR1brGM6XMsC9314M9OhOkuWwU0TgesKdX0JYKYJ3/fEOg4EpgnPD8Q6xuCb
+      Jlw2RBcE8EwTLuehOkk3YO6cK8lQnZzJwDRNWJaFBOMoqoOvxllF2SlP5+E6iYuyBULgnINt
+      GSCVSu3Z9vj8a845OOdD14bfDkM0dxvYTJaQJGlPHU/+bj+6J2MbpAuCYM+8/HHout0ustns
+      UN1RxXfS22VfPcA22z+WJGnXydNrb6De7GBq7iySmrxT2eO/AQCr10Wn76BUKkGVpYE6znzU
+      amuAksBUpYztnz9eNwD4Th8Pl1YxM38OycSHO/qkjgcellceQU9mUCkXd/JuntQx30VtbR1q
+      wkClVNxV7+P70G03oSWz8F0LmUxmV71PHgSr30e318NkpSLUmaYJx3FRKhV3/ibL8q42bjcb
+      UJMZpA1912+fLM+2LPiejZ7DMVUphuqsfh+OY8FjMiqlgjA+AGh3OshNTITquu0mzL6NhJFC
+      qZAbrOMcfauPVruDcrmChKaGlsd8D61WG8nMBFJGYnC7cIblpYfQM0WUCx/Gtrc8jkZ9DY7H
+      UJmagqbIo30ManY7eFh9CMf/MHNqUEMuVx/Csp1dqWp7GrJZx0bXwfrqEvpuEKpr1GuQuIcP
+      7i6CsfDy1laWsFLfwEajDi8Ij29tZQm2z1GtPsTjOWdP7sPKWh3tRg2/ev/Grr8POmmWFu9g
+      YWlNqOt321i8dwtL6+09v3+c1XoDdqeJ5VVxebVHS3j3/VtYq4t1S9XNDL/1ek2oW7h/B0vL
+      y7hzf0Go03QDisR3HYtBupXqAt6/eWdPuuKTOtdq495CFesbLYTi21hr9bH44C4sZ/dt7K7y
+      AgeLy2vwrTZW1jsAPmIPMAjmO/Cg4sKFS0hrYl9NZFJYWl9HsTINLSSbTkkkMVlUUau7SKjh
+      5U3kClB0D06zA4bwUf3kmfPwlUdIGrowlS5fKMJc20AuVwjVAEA5l0euUoEnzpIEAKiyBNsT
+      5x6nsjlki5MQhAYAKOWzcFwbbVvCnECXzhVxSTfQC8THYqqSx407tzE9f0moO3v+ItZXl1Eq
+      Twl1jtWD7XrQVUHDSBLOX7iEvuPD8XzoifCnKrKiwbV7kES30LKGtK7CyJURiNJW5QQuX5iH
+      71qwtxp6ZD2ArOoA89Bt1vDBvYdCrW4kAUjQ1fCjzQMPK49WkTL0XVfsJ/E9F9VHNWSSGnzB
+      5yslSYLk9fGguir8vphlW5AVFbZjCfdBU4DFxUWYfVuoA4BEMoOJpD5Up3IPpjV4IL7NxEQO
+      rmVBVhNCnWP1sNbuQR2yhkcmX8GLL34KvVZdqFupLqDTrKNtD3O8BFlWIEuCU4sz3LlzB62O
+      OTQnW5JkaIoCJhqpyiomywW0mhvwfMH+cob1RhOKBLhbupH1AACQy2bhBcBEMiXUqXoSyYQ6
+      bGkHJPQkEgkZfsAADO4qjHQGlaILzw+gKeLLp9VZR3XNx/OcQxHYQJIl8QEEMFGaRLbIMeyS
+      zXwHi8s1FEoVoQ4AWt0+3CHnl+PYCCQNhiJ+dsEgo5DR0bHFhuq2Gqg3NpBITQh1yVQGMg9g
+      iU4wALl8Ebduv4lMvoJKKR+qm8jl4PoMruMipYf3AL5nQc8UUcqFPEIEAO5jcWER6UIFuiY4
+      pWUVpVwKTFKhbQ2MRzoGaG40cPOD69DT4TsOAIFrITVRhCo4YRNGCtOzs/AcF6pgdQLON0f6
+      3U4bnqAHWK+vYf7qi/jCb/86VEF3ahhJeK4HVRv+skOSJGFvsqXaXDlhyPIrfbODTCaDYrEk
+      1KmqBkgSkoa4R8kkdThMQaUgPrF7Zhet+iO48uBHz9ukUkm4dh9GWlwe4xzlQh5GSnQRlJDU
+      E+g5PnJZ8cWSBz58ziG8WkoKpqZnoHEP3SE9cnZiArdv3UJqq0ceqQEy6TQKpbLYhQCa63Xc
+      uHEdHTv8auJYJpYe3IOSKSOVCF92Q9OTmJubwzPPPgtDMPaweh08WFjA8koNXNCYjXodqqag
+      1++PZMqHpGiYLGSQGTKmcB0PWiIB3xNfsc1OG2AeqrUNoa5vOVDgoy4aPAKYmb+AFz75Eori
+      8x+Neg0dP4GcJu4B7t67B1lLoNsW1cuxtFRFuViE2R/8DmkbPVOExiz0bcH0A87heR78IBja
+      c7ca65tPoLqb74ZGegvk+T48zwPj4cNR1zaRKc3gjKcgpYef2GrCQC6fh2uZCFgOijz4Wht1
+      DaAz5y7t6EXMzM3i4VoHs5PlCFf34UiSBN/pY2nDw4W58AFkv9eB6XHYlviEKE3NIAiWwMKe
+      HmxhaDJcX0ZCcPHYjk/Tk5ieTAp1s2fOwbpzGxsdE5PlcDNPlwtodnqYmhIYXpJx+fIV3L57
+      H3a5jCzC3efZPTgeh20L2kVWMH/uvDB+AEDgomE6uHjpCsr5zUfXo3sKFHiwfeDs/DlkjPBi
+      me9isbqMmckiHI9BD1n0KZnJYz4jvpXaD8NO/G2qSysoZhNoSJXIvxmGyxRcOTsj1MzMn0cQ
+      BEM/Oi3LCqbPnEP4e9dNbC+AAgZnROs31VZXkcoVYSTTQt1EoYyJQllcGGd4VKtjanoGKV0w
+      mA9crHdszM3PY3ZqSJlRkDWUCzk8rC4hV9q8GI3sFsjp1NFxJXC3i/VOuFuNTBHljILbDxbh
+      C4f2R8PM7CwslkCS9YRL6u2HUiGHeqMp1Gz3ZHJIT7dfUoYOaEnx4HEfzJw5i7nZ2V0vtz4y
+      koxLl69gZmYGadHTMUkG8104Vm/P8/2PBPOwsLCIbL4EfasHHVkPYORn8Ewu2nSGXKGCWSWL
+      XFJ8tTsK9GQa00Oucvul3++hZ0V4YTBCCuVJiEcdJwBZxdlzF0ZXnpLAJz754u4qRlX29rQI
+      WZaHGkA3DHSaG/D849cDjJr11WVYnoxsesgokzgSxp8Rxhm6fQuTU5MQvOA9NTh+AAa+M+eJ
+      OF6M9ClQFMz2OhwvQLZQET7fPy0UCwVwyJCGvLkljoaxn4FawoDrOOi0Nrbe8J5ukuksmo/u
+      42fv3j7qUIgBjL0H0FMTuHhR/DbxtFGYnMW0ZB51GMQATv89yDEgmUwDnD6ocBwhAxwyttmC
+      6QSYmRa/CCOOBjLAIbP8qIaEpmK9sX7UoRADGPsYIG5cvPwUAGB6SpxIQhwNZIBDZlTziYjD
+      4f8Bn39LROYoBRYAAAAASUVORK5CYII=
     </thumbnail>
   </thumbnails>
   <external>

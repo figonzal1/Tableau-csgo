@@ -5486,7 +5486,7 @@
                   </zone-style>
                 </zone>
                 <zone h='24733' id='68' name='Daño de armas HP' show-title='false' w='65765' x='800' y='46667'>
-                  <layout-cache minheight='241' type-h='scalable' type-w='cell' />
+                  <layout-cache cell-count-w='39' minheight='241' non-cell-size-w='59' type-h='scalable' type-w='cell' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -5792,7 +5792,7 @@
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='70' />
+      <active id='-1' />
     </window>
     <window class='dashboard' name='Dashboard TreeMap'>
       <viewpoints>
